@@ -1,79 +1,180 @@
 ---
+
 ---
 
 <header class="bg-white shadow-md sticky top-0 z-50 w-full">
-  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex items-center justify-between py-3 sm:py-4">
-      <!-- Logo และชื่อบริษัท -->
-      <div class="flex items-center space-x-2 sm:space-x-3">
-        <a href="/" class="flex items-center space-x-2 sm:space-x-3 hover:opacity-80 transition-opacity">
-          <div class="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center flex-shrink-0">
-            <span class="text-white font-bold text-lg sm:text-xl">SML</span>
-          </div>
-          <div class="hidden xs:block">
-            <h1 class="text-lg sm:text-xl font-bold text-gray-800 leading-tight">SML Soft</h1>
-            <p class="text-xs sm:text-sm text-gray-600 leading-tight">โซลูชั่นซอฟต์แวร์ครบวงจร</p>
-          </div>
-        </a>
-      </div>
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between py-3 sm:py-4">
+            <!-- Logo และชื่อบริษัท -->
+            <div class="flex items-center space-x-2 sm:space-x-3">
+                <a
+                    href="/"
+                    class="flex items-center space-x-2 sm:space-x-3 hover:opacity-80 transition-opacity"
+                >
+                    <div
+                        class="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center flex-shrink-0"
+                    >
+                        <span class="text-white font-bold text-lg sm:text-xl"
+                            >SML</span
+                        >
+                    </div>
+                    <div class="hidden xs:block">
+                        <h1
+                            class="text-lg sm:text-xl font-bold text-gray-800 leading-tight"
+                        >
+                            SML Soft
+                        </h1>
+                        <p
+                            class="text-xs sm:text-sm text-gray-600 leading-tight"
+                        >
+                            โซลูชั่นซอฟต์แวร์ครบวงจร
+                        </p>
+                    </div>
+                </a>
+            </div>
 
-      <!-- Navigation Menu (Desktop) -->
-      <nav class="hidden xl:flex items-center space-x-6 lg:space-x-8">
-        <a href="/" class="text-gray-700 hover:text-blue-600 font-medium transition-colors text-sm lg:text-base">หน้าแรก</a>
-        <a href="/ai-solutions" class="text-gray-700 hover:text-blue-600 font-medium transition-colors text-sm lg:text-base whitespace-nowrap">AI ช่วยคิด</a>
-        <a href="/solutions" class="text-gray-700 hover:text-blue-600 font-medium transition-colors text-sm lg:text-base whitespace-nowrap">โซลูชั่นครบวงจร</a>
-        <a href="/accounting-office" class="text-gray-700 hover:text-blue-600 font-medium transition-colors text-sm lg:text-base whitespace-nowrap">สำนักงานบัญชี</a>
-        <a href="/features" class="text-gray-700 hover:text-blue-600 font-medium transition-colors text-sm lg:text-base">ความสามารถ</a>
-        <a href="/pricing" class="text-gray-700 hover:text-blue-600 font-medium transition-colors text-sm lg:text-base">ราคา</a>
-        <a href="/contact" class="bg-blue-600 text-white px-4 lg:px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors text-sm lg:text-base whitespace-nowrap">ติดต่อเรา</a>
-      </nav>
+            <!-- Navigation Menu (Desktop) -->
+            <nav class="hidden xl:flex items-center space-x-6 lg:space-x-8">
+                <a
+                    href="/"
+                    class="text-gray-700 hover:text-blue-600 font-medium transition-colors text-sm lg:text-base"
+                    >หน้าแรก</a
+                >
+                <a
+                    href="/ai-solutions"
+                    class="text-gray-700 hover:text-blue-600 font-medium transition-colors text-sm lg:text-base whitespace-nowrap"
+                    >AI ช่วยคิด</a
+                >
+                <a
+                    href="/solutions"
+                    class="text-gray-700 hover:text-blue-600 font-medium transition-colors text-sm lg:text-base whitespace-nowrap"
+                    >โซลูชั่นครบวงจร</a
+                >
+                <a
+                    href="/accounting-office"
+                    class="text-gray-700 hover:text-blue-600 font-medium transition-colors text-sm lg:text-base whitespace-nowrap"
+                    >สำนักงานบัญชี</a
+                >
+                <a
+                    href="/features"
+                    class="text-gray-700 hover:text-blue-600 font-medium transition-colors text-sm lg:text-base"
+                    >ความสามารถ</a
+                >
+                <a
+                    href="/pricing"
+                    class="text-gray-700 hover:text-blue-600 font-medium transition-colors text-sm lg:text-base"
+                    >ราคา</a
+                >
+                <a
+                    href="/contact"
+                    class="bg-blue-600 text-white px-4 lg:px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors text-sm lg:text-base whitespace-nowrap"
+                    >ติดต่อเรา</a
+                >
+            </nav>
 
-      <!-- Tablet Menu -->
-      <nav class="hidden lg:flex xl:hidden items-center space-x-4">
-        <a href="/" class="text-gray-700 hover:text-blue-600 font-medium transition-colors text-sm">หน้าแรก</a>
-        <a href="/solutions" class="text-gray-700 hover:text-blue-600 font-medium transition-colors text-sm">โซลูชั่น</a>
-        <a href="/features" class="text-gray-700 hover:text-blue-600 font-medium transition-colors text-sm">ฟีเจอร์</a>
-        <a href="/pricing" class="text-gray-700 hover:text-blue-600 font-medium transition-colors text-sm">ราคา</a>
-        <a href="/contact" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors text-sm">ติดต่อ</a>
-      </nav>
+            <!-- Tablet Menu -->
+            <nav class="hidden lg:flex xl:hidden items-center space-x-4">
+                <a
+                    href="/"
+                    class="text-gray-700 hover:text-blue-600 font-medium transition-colors text-sm"
+                    >หน้าแรก</a
+                >
+                <a
+                    href="/solutions"
+                    class="text-gray-700 hover:text-blue-600 font-medium transition-colors text-sm"
+                    >โซลูชั่น</a
+                >
+                <a
+                    href="/features"
+                    class="text-gray-700 hover:text-blue-600 font-medium transition-colors text-sm"
+                    >ฟีเจอร์</a
+                >
+                <a
+                    href="/pricing"
+                    class="text-gray-700 hover:text-blue-600 font-medium transition-colors text-sm"
+                    >ราคา</a
+                >
+                <a
+                    href="/contact"
+                    class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors text-sm"
+                    >ติดต่อ</a
+                >
+            </nav>
 
-      <!-- Mobile Menu Button -->
-      <button 
-        class="lg:hidden flex items-center p-2 text-gray-700 hover:text-blue-600 touch-manipulation"
-        id="mobile-menu-button"
-        aria-label="เปิดเมนู"
-      >
-        <svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-        </svg>
-      </button>
+            <!-- Mobile Menu Button -->
+            <button
+                class="lg:hidden flex items-center p-2 text-gray-700 hover:text-blue-600 touch-manipulation"
+                id="mobile-menu-button"
+                aria-label="เปิดเมนู"
+            >
+                <svg
+                    class="w-5 h-5 sm:w-6 sm:h-6"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                >
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="lg:hidden hidden overflow-hidden" id="mobile-menu">
+            <div class="py-4 border-t border-gray-200">
+                <nav class="flex flex-col space-y-3">
+                    <a
+                        href="/"
+                        class="text-gray-700 hover:text-blue-600 font-medium transition-colors py-2 px-1 rounded touch-manipulation"
+                        >หน้าแรก</a
+                    >
+                    <a
+                        href="/ai-solutions"
+                        class="text-gray-700 hover:text-blue-600 font-medium transition-colors py-2 px-1 rounded touch-manipulation"
+                        >AI ช่วยคิด</a
+                    >
+                    <a
+                        href="/solutions"
+                        class="text-gray-700 hover:text-blue-600 font-medium transition-colors py-2 px-1 rounded touch-manipulation"
+                        >โซลูชั่นครบวงจร</a
+                    >
+                    <a
+                        href="/accounting-office"
+                        class="text-gray-700 hover:text-blue-600 font-medium transition-colors py-2 px-1 rounded touch-manipulation"
+                        >สำนักงานบัญชี</a
+                    >
+                    <a
+                        href="/features"
+                        class="text-gray-700 hover:text-blue-600 font-medium transition-colors py-2 px-1 rounded touch-manipulation"
+                        >ความสามารถ</a
+                    >
+                    <a
+                        href="/pricing"
+                        class="text-gray-700 hover:text-blue-600 font-medium transition-colors py-2 px-1 rounded touch-manipulation"
+                        >ราคา</a
+                    >
+                    <a
+                        href="/contact"
+                        class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors text-center touch-manipulation font-medium"
+                        >ติดต่อเรา</a
+                    >
+                </nav>
+            </div>
+        </div>
     </div>
-
-    <!-- Mobile Menu -->
-    <div class="lg:hidden hidden overflow-hidden" id="mobile-menu">
-      <div class="py-4 border-t border-gray-200">
-        <nav class="flex flex-col space-y-3">
-          <a href="/" class="text-gray-700 hover:text-blue-600 font-medium transition-colors py-2 px-1 rounded touch-manipulation">หน้าแรก</a>
-          <a href="/ai-solutions" class="text-gray-700 hover:text-blue-600 font-medium transition-colors py-2 px-1 rounded touch-manipulation">AI ช่วยคิด</a>
-          <a href="/solutions" class="text-gray-700 hover:text-blue-600 font-medium transition-colors py-2 px-1 rounded touch-manipulation">โซลูชั่นครบวงจร</a>
-          <a href="/accounting-office" class="text-gray-700 hover:text-blue-600 font-medium transition-colors py-2 px-1 rounded touch-manipulation">สำนักงานบัญชี</a>
-          <a href="/features" class="text-gray-700 hover:text-blue-600 font-medium transition-colors py-2 px-1 rounded touch-manipulation">ความสามารถ</a>
-          <a href="/pricing" class="text-gray-700 hover:text-blue-600 font-medium transition-colors py-2 px-1 rounded touch-manipulation">ราคา</a>
-          <a href="/contact" class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors text-center touch-manipulation font-medium">ติดต่อเรา</a>
-        </nav>
-      </div>
-    </div>
-  </div>
 </header>
 
 <script>
-  // Mobile menu toggle
-  const mobileMenuButton = document.getElementById('mobile-menu-button');
-  const mobileMenu = document.getElementById('mobile-menu');
+    // Mobile menu toggle
+    const mobileMenuButton = document.getElementById("mobile-menu-button");
+    const mobileMenu = document.getElementById("mobile-menu");
 
-  if (mobileMenuButton && mobileMenu) {
-    mobileMenuButton.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
-    });
-  }
+    if (mobileMenuButton && mobileMenu) {
+        mobileMenuButton.addEventListener("click", () => {
+            mobileMenu.classList.toggle("hidden");
+        });
+    }
 </script>
