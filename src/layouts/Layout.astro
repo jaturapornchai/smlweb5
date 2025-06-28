@@ -15,7 +15,7 @@ const { title, description } = Astro.props;
 <html lang="th">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<meta
@@ -47,9 +47,9 @@ const { title, description } = Astro.props;
 			gtag("config", "G-KVZRB8RF05");
 		</script>
 	</head>
-	<body class="font-thai bg-gray-50">
+	<body class="font-thai bg-gray-50 overflow-x-hidden">
 		<Header />
-		<main class="min-h-screen">
+		<main class="min-h-screen w-full">
 			<slot />
 		</main>
 		<Footer />
