@@ -1,0 +1,335 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="ราคาและแพ็คเกจ" description="ราคาโปรแกรม SML Account และ SML POS พร้อมแพ็คเกจที่หลากหลาย เหมาะสมกับทุกขนาดธุรกิจ">
+  <div class="py-20">
+    <div class="container mx-auto px-4">
+      
+      <!-- Page Header -->
+      <div class="text-center mb-16">
+        <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">ราคาและแพ็คเกจ</h1>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          เลือกแพ็คเกจที่เหมาะสมกับธุรกิจของคุณ พร้อมบริการหลังการขายที่ครบครัน
+        </p>
+      </div>
+
+      <!-- Service Terms -->
+      <div class="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-8 mb-16">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6 text-center">เงื่อนไขการบริการ</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="text-center">
+            <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mx-auto mb-3">
+              <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+              </svg>
+            </div>
+            <h3 class="font-semibold text-gray-900 mb-2">อบรมฟรี</h3>
+            <p class="text-gray-600 text-sm">2 วัน (9.00-16.00)<br/>จำนวน 2 ท่าน</p>
+          </div>
+          
+          <div class="text-center">
+            <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-3">
+              <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+              </svg>
+            </div>
+            <h3 class="font-semibold text-gray-900 mb-2">ติดตั้งออนไลน์ฟรี</h3>
+            <p class="text-gray-600 text-sm">ไม่มีค่าใช้จ่าย<br/>เพิ่มเติม</p>
+          </div>
+          
+          <div class="text-center">
+            <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mx-auto mb-3">
+              <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192L5.636 18.364M12 2.25a9.75 9.75 0 109.75 9.75A9.75 9.75 0 0012 2.25zm0 0v19.5"></path>
+              </svg>
+            </div>
+            <h3 class="font-semibold text-gray-900 mb-2">ดูแลหลังการขาย</h3>
+            <p class="text-gray-600 text-sm">ฟรี 1 ปี<br/>ปีถัดไป 10% ของราคา</p>
+          </div>
+          
+          <div class="text-center">
+            <div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mx-auto mb-3">
+              <svg class="w-6 h-6 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"></path>
+              </svg>
+            </div>
+            <h3 class="font-semibold text-gray-900 mb-2">อัพเดทฟรี</h3>
+            <p class="text-gray-600 text-sm">ในรุ่นเดียวกัน<br/>ตลอดการใช้งาน</p>
+          </div>
+        </div>
+        
+        <div class="mt-6 p-4 bg-yellow-50 border border-yellow-200 rounded-lg">
+          <p class="text-yellow-800 text-sm">
+            <strong>หมายเหตุ:</strong> กรณีติดตั้งหรือบริการนอกสถานที่ จะมีค่าใช้จ่าย 7,500 บาท (ไม่รวมค่าเดินทาง/ค่าที่พัก)
+          </p>
+        </div>
+      </div>
+
+      <!-- POS + Account Packages -->
+      <div class="mb-16">
+        <h2 class="text-3xl font-bold text-center text-gray-900 mb-8">โปรแกรม POS + Account</h2>
+        <div class="overflow-x-auto">
+          <table class="w-full bg-white rounded-2xl shadow-lg overflow-hidden">
+            <thead class="bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+              <tr>
+                <th class="px-6 py-4 text-left font-semibold">แพ็คเกจหลัก</th>
+                <th class="px-6 py-4 text-center font-semibold">POS Lite</th>
+                <th class="px-6 py-4 text-center font-semibold">POS STD</th>
+                <th class="px-6 py-4 text-center font-semibold">Account POS</th>
+                <th class="px-6 py-4 text-center font-semibold">Account POS Pro</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-200">
+              <tr class="hover:bg-gray-50">
+                <td class="px-6 py-4 font-medium text-gray-900">Pack 1 (stand alone)</td>
+                <td class="px-6 py-4 text-center text-blue-600 font-bold">9,000.-</td>
+                <td class="px-6 py-4 text-center text-blue-600 font-bold">18,000.-</td>
+                <td class="px-6 py-4 text-center text-blue-600 font-bold">40,000.-</td>
+                <td class="px-6 py-4 text-center text-blue-600 font-bold">100,000.-</td>
+              </tr>
+              <tr class="hover:bg-gray-50">
+                <td class="px-6 py-4 font-medium text-gray-900">Pack 5 Concurrent User</td>
+                <td class="px-6 py-4 text-center text-blue-600 font-bold">21,000.-</td>
+                <td class="px-6 py-4 text-center text-blue-600 font-bold">32,000.-</td>
+                <td class="px-6 py-4 text-center text-blue-600 font-bold">57,000.-</td>
+                <td class="px-6 py-4 text-center text-blue-600 font-bold">140,000.-</td>
+              </tr>
+              <tr class="hover:bg-gray-50">
+                <td class="px-6 py-4 font-medium text-gray-900">Pack 10 Concurrent User</td>
+                <td class="px-6 py-4 text-center text-blue-600 font-bold">36,000.-</td>
+                <td class="px-6 py-4 text-center text-blue-600 font-bold">50,000.-</td>
+                <td class="px-6 py-4 text-center text-blue-600 font-bold">82,000.-</td>
+                <td class="px-6 py-4 text-center text-blue-600 font-bold">200,000.-</td>
+              </tr>
+              <tr class="hover:bg-gray-50">
+                <td class="px-6 py-4 font-medium text-gray-900">Pack 15 Concurrent User</td>
+                <td class="px-6 py-4 text-center text-blue-600 font-bold">51,000.-</td>
+                <td class="px-6 py-4 text-center text-blue-600 font-bold">66,000.-</td>
+                <td class="px-6 py-4 text-center text-blue-600 font-bold">100,000.-</td>
+                <td class="px-6 py-4 text-center text-blue-600 font-bold">260,000.-</td>
+              </tr>
+              <tr class="hover:bg-gray-50">
+                <td class="px-6 py-4 font-medium text-gray-900">Pack 20 Concurrent User</td>
+                <td class="px-6 py-4 text-center text-blue-600 font-bold">66,000.-</td>
+                <td class="px-6 py-4 text-center text-blue-600 font-bold">79,000.-</td>
+                <td class="px-6 py-4 text-center text-blue-600 font-bold">120,000.-</td>
+                <td class="px-6 py-4 text-center text-blue-600 font-bold">300,000.-</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        
+        <!-- Additional Services for POS+Account -->
+        <div class="mt-8 bg-gray-50 rounded-2xl p-8">
+          <h3 class="text-xl font-bold text-gray-900 mb-6">แพ็คเกจเสริม</h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="bg-white rounded-lg p-6">
+              <h4 class="font-semibold text-gray-900 mb-2">เพิ่ม Concurrent User</h4>
+              <div class="space-y-2 text-sm text-gray-600">
+                <div class="flex justify-between"><span>POS Lite:</span><span class="font-bold">3,000.-/User</span></div>
+                <div class="flex justify-between"><span>POS STD:</span><span class="font-bold">5,000.-/User</span></div>
+                <div class="flex justify-between"><span>Account POS:</span><span class="font-bold">7,000.-/User</span></div>
+                <div class="flex justify-between"><span>Account POS Pro:</span><span class="font-bold">18,000.-/User</span></div>
+              </div>
+            </div>
+            
+            <div class="bg-white rounded-lg p-6">
+              <h4 class="font-semibold text-gray-900 mb-2">SML Check Stock</h4>
+              <p class="text-gray-600 text-sm mb-2">บนมือถือ</p>
+              <p class="text-green-600 font-bold">ฟรีตามจำนวน Concurrent User</p>
+              <p class="text-xs text-gray-500">(ใช้ตามการต่ออายุ MA)</p>
+            </div>
+            
+            <div class="bg-white rounded-lg p-6">
+              <h4 class="font-semibold text-gray-900 mb-2">SML Mobile Sale</h4>
+              <p class="text-gray-600 text-sm mb-2">บนมือถือ</p>
+              <p class="text-blue-600 font-bold">3,000.-/User</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Account Only Packages -->
+      <div class="mb-16">
+        <h2 class="text-3xl font-bold text-center text-gray-900 mb-8">โปรแกรมบัญชี (Account)</h2>
+        <div class="overflow-x-auto">
+          <table class="w-full bg-white rounded-2xl shadow-lg overflow-hidden">
+            <thead class="bg-gradient-to-r from-green-600 to-emerald-600 text-white">
+              <tr>
+                <th class="px-6 py-4 text-left font-semibold">แพ็คเกจหลัก</th>
+                <th class="px-6 py-4 text-center font-semibold">Merchant</th>
+                <th class="px-6 py-4 text-center font-semibold">Account</th>
+                <th class="px-6 py-4 text-center font-semibold">Account Pro</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-200">
+              <tr class="hover:bg-gray-50">
+                <td class="px-6 py-4 font-medium text-gray-900">Pack 1 (stand alone)</td>
+                <td class="px-6 py-4 text-center text-green-600 font-bold">13,000.-</td>
+                <td class="px-6 py-4 text-center text-green-600 font-bold">25,000.-</td>
+                <td class="px-6 py-4 text-center text-green-600 font-bold">80,000.-</td>
+              </tr>
+              <tr class="hover:bg-gray-50">
+                <td class="px-6 py-4 font-medium text-gray-900">Pack 5 Concurrent User</td>
+                <td class="px-6 py-4 text-center text-green-600 font-bold">24,650.-</td>
+                <td class="px-6 py-4 text-center text-green-600 font-bold">38,250.-</td>
+                <td class="px-6 py-4 text-center text-green-600 font-bold">108,000.-</td>
+              </tr>
+              <tr class="hover:bg-gray-50">
+                <td class="px-6 py-4 font-medium text-gray-900">Pack 10 Concurrent User</td>
+                <td class="px-6 py-4 text-center text-green-600 font-bold">41,650.-</td>
+                <td class="px-6 py-4 text-center text-green-600 font-bold">56,000.-</td>
+                <td class="px-6 py-4 text-center text-green-600 font-bold">150,000.-</td>
+              </tr>
+              <tr class="hover:bg-gray-50">
+                <td class="px-6 py-4 font-medium text-gray-900">Pack 15 Concurrent User</td>
+                <td class="px-6 py-4 text-center text-green-600 font-bold">58,650.-</td>
+                <td class="px-6 py-4 text-center text-green-600 font-bold">71,250.-</td>
+                <td class="px-6 py-4 text-center text-green-600 font-bold">180,000.-</td>
+              </tr>
+              <tr class="hover:bg-gray-50">
+                <td class="px-6 py-4 font-medium text-gray-900">Pack 20 Concurrent User</td>
+                <td class="px-6 py-4 text-center text-green-600 font-bold">75,650.-</td>
+                <td class="px-6 py-4 text-center text-green-600 font-bold">84,000.-</td>
+                <td class="px-6 py-4 text-center text-green-600 font-bold">210,000.-</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        
+        <!-- Additional Services for Account -->
+        <div class="mt-8 bg-gray-50 rounded-2xl p-8">
+          <h3 class="text-xl font-bold text-gray-900 mb-6">แพ็คเกจเสริม</h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="bg-white rounded-lg p-6">
+              <h4 class="font-semibold text-gray-900 mb-2">เพิ่ม Concurrent User</h4>
+              <div class="space-y-2 text-sm text-gray-600">
+                <div class="flex justify-between"><span>Merchant:</span><span class="font-bold">4,000.-/User</span></div>
+                <div class="flex justify-between"><span>Account:</span><span class="font-bold">5,000.-/User</span></div>
+                <div class="flex justify-between"><span>Account Pro:</span><span class="font-bold">12,000.-/User</span></div>
+              </div>
+            </div>
+            
+            <div class="bg-white rounded-lg p-6">
+              <h4 class="font-semibold text-gray-900 mb-2">SML Check Stock</h4>
+              <p class="text-gray-600 text-sm mb-2">บนมือถือ</p>
+              <p class="text-green-600 font-bold">ฟรีตามจำนวน Concurrent User</p>
+              <p class="text-xs text-gray-500">(ใช้ตามการต่ออายุ MA)</p>
+            </div>
+            
+            <div class="bg-white rounded-lg p-6">
+              <h4 class="font-semibold text-gray-900 mb-2">SML MIS</h4>
+              <p class="text-gray-600 text-sm mb-2">ระบบรายงาน</p>
+              <p class="text-green-600 font-bold">ฟรีตามจำนวน Concurrent User</p>
+              <p class="text-xs text-gray-500">(ใช้ตามการต่ออายุ MA)</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Concurrent User Explanation -->
+      <div class="bg-gradient-to-r from-orange-50 to-red-50 rounded-2xl p-8 mb-16 border border-orange-200">
+        <h2 class="text-2xl font-bold text-gray-900 mb-4">Concurrent User คืออะไร?</h2>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+          <div>
+            <p class="text-gray-700 mb-4 leading-relaxed">
+              <strong>Concurrent User</strong> หมายถึง ติดตั้งได้ไม่จำกัดจำนวนเครื่อง แต่จะเข้าใช้งานได้พร้อมกันตามจำนวน User ที่ซื้อ
+            </p>
+            <div class="bg-white p-4 rounded-lg border border-orange-200">
+              <h4 class="font-semibold text-gray-900 mb-2">ตัวอย่าง:</h4>
+              <p class="text-gray-700">
+                Pack 5 User = ใช้ได้พร้อมกัน 5 คน<br/>
+                คนต่อไปต้องรอคนอื่นออกจากโปรแกรมก่อน
+              </p>
+            </div>
+          </div>
+          
+          <div class="text-center">
+            <div class="bg-white rounded-lg p-6 shadow-md">
+              <div class="flex justify-center items-center space-x-4 mb-4">
+                <!-- Active Users -->
+                <div class="flex space-x-2">
+                  <div class="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
+                    <span class="text-white text-sm font-bold">1</span>
+                  </div>
+                  <div class="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
+                    <span class="text-white text-sm font-bold">2</span>
+                  </div>
+                  <div class="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
+                    <span class="text-white text-sm font-bold">3</span>
+                  </div>
+                  <div class="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
+                    <span class="text-white text-sm font-bold">4</span>
+                  </div>
+                  <div class="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
+                    <span class="text-white text-sm font-bold">5</span>
+                  </div>
+                </div>
+                
+                <!-- Waiting User -->
+                <div class="w-8 h-8 bg-red-300 rounded-full flex items-center justify-center">
+                  <span class="text-red-800 text-sm font-bold">6</span>
+                </div>
+              </div>
+              <p class="text-sm text-gray-600">Pack 5 User: 5 คนใช้งาน, 1 คนรอ</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Important Notes -->
+      <div class="bg-red-50 border border-red-200 rounded-2xl p-8">
+        <h2 class="text-2xl font-bold text-red-800 mb-4">ข้อมูลสำคัญ</h2>
+        <div class="space-y-3 text-red-700">
+          <div class="flex items-start space-x-3">
+            <svg class="w-5 h-5 text-red-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path>
+            </svg>
+            <span><strong>ไม่มีการทดลองใช้</strong> - ลูกค้าสามารถปรึกษาและดูการสาธิตได้ฟรี</span>
+          </div>
+          <div class="flex items-start space-x-3">
+            <svg class="w-5 h-5 text-red-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path>
+            </svg>
+            <span>ราคาไม่รวมภาษีมูลค่าเพิ่ม (VAT)</span>
+          </div>
+          <div class="flex items-start space-x-3">
+            <svg class="w-5 h-5 text-red-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path>
+            </svg>
+            <span>ราคาอาจมีการเปลี่ยนแปลงโดยไม่แจ้งให้ทราบล่วงหน้า</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact CTA -->
+      <div class="mt-16 text-center">
+        <h2 class="text-3xl font-bold text-gray-900 mb-6">ต้องการปรึกษาเพิ่มเติม?</h2>
+        <p class="text-xl text-gray-600 mb-8">
+          ทีมงานของเราพร้อมให้คำปรึกษาเพื่อหาแพ็คเกจที่เหมาะสมกับธุรกิจของคุณ
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a 
+            href="/contact" 
+            class="inline-flex items-center justify-center px-8 py-4 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
+          >
+            <span>ปรึกษาฟรี</span>
+            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </a>
+          <a 
+            href="tel:0814345533" 
+            class="inline-flex items-center justify-center px-8 py-4 border-2 border-green-600 text-green-600 font-semibold rounded-lg hover:bg-green-50 transition-colors"
+          >
+            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path>
+            </svg>
+            <span>โทรเลย 081-434-5533</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>

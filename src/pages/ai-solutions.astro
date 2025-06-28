@@ -1,0 +1,630 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout
+    title="AI ช่วยคิด"
+    description="AI Connect - โซลูชั่น AI ที่จะช่วยเพิ่มประสิทธิภาพธุรกิจของคุณ ด้วยการใช้ AI ในการจัดการข้อมูล BI และ Dashboard"
+>
+    <div class="py-20">
+        <div class="container mx-auto px-4">
+            <!-- Hero Section -->
+            <div class="text-center mb-16">
+                <div class="inline-block p-4 bg-purple-100 rounded-full mb-6">
+                    <svg
+                        class="w-16 h-16 text-purple-600"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                    >
+                        <path
+                            fill-rule="evenodd"
+                            d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                </div>
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                    AI ช่วยคิด
+                </h1>
+                <p
+                    class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed"
+                >
+                    ใช้พลัง AI เพื่อยกระดับธุรกิจของคุณ
+                    ด้วยโซลูชั่นที่ออกแบบมาเพื่อเพิ่มประสิทธิภาพ ลดต้นทุน
+                    และสร้างข้อมูลเชิงลึกที่มีค่า
+                </p>
+            </div>
+
+            <!-- AI Connect Overview -->
+            <div
+                class="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-12 text-white mb-16"
+            >
+                <div
+                    class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
+                >
+                    <div>
+                        <h2 class="text-3xl font-bold mb-6">AI Connect</h2>
+                        <p class="text-xl mb-8 leading-relaxed">
+                            ให้คำปรึกษาการใช้ AI กับระบบทั้งหมด ออกแบบ Data
+                            Center เพื่อใช้ในงาน BI และ AI พัฒนาโปรแกรม
+                            Dashboard, AI Prompt, AI Agent
+                            และทุกอย่างที่เกี่ยวข้องกับระบบ ERP
+                        </p>
+
+                        <div class="space-y-4">
+                            <div class="flex items-start space-x-3">
+                                <div
+                                    class="w-6 h-6 bg-yellow-400 rounded-full flex items-center justify-center flex-shrink-0 mt-1"
+                                >
+                                    <svg
+                                        class="w-4 h-4 text-yellow-800"
+                                        fill="currentColor"
+                                        viewBox="0 0 20 20"
+                                    >
+                                        <path
+                                            fill-rule="evenodd"
+                                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                </div>
+                                <span class="text-lg"
+                                    >คำปรึกษาการนำ AI มาใช้ในธุรกิจ</span
+                                >
+                            </div>
+                            <div class="flex items-start space-x-3">
+                                <div
+                                    class="w-6 h-6 bg-yellow-400 rounded-full flex items-center justify-center flex-shrink-0 mt-1"
+                                >
+                                    <svg
+                                        class="w-4 h-4 text-yellow-800"
+                                        fill="currentColor"
+                                        viewBox="0 0 20 20"
+                                    >
+                                        <path
+                                            fill-rule="evenodd"
+                                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                </div>
+                                <span class="text-lg"
+                                    >ออกแบบ Data Center สำหรับ BI และ AI</span
+                                >
+                            </div>
+                            <div class="flex items-start space-x-3">
+                                <div
+                                    class="w-6 h-6 bg-yellow-400 rounded-full flex items-center justify-center flex-shrink-0 mt-1"
+                                >
+                                    <svg
+                                        class="w-4 h-4 text-yellow-800"
+                                        fill="currentColor"
+                                        viewBox="0 0 20 20"
+                                    >
+                                        <path
+                                            fill-rule="evenodd"
+                                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                </div>
+                                <span class="text-lg"
+                                    >พัฒนา AI Agent และ AI Prompt เฉพาะธุรกิจ</span
+                                >
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- AI Visualization -->
+                    <div class="relative">
+                        <div class="w-80 h-80 mx-auto relative">
+                            <!-- Central AI Hub -->
+                            <div
+                                class="absolute inset-1/2 transform -translate-x-1/2 -translate-y-1/2 w-24 h-24 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full flex items-center justify-center animate-pulse"
+                            >
+                                <span class="text-2xl font-bold text-purple-900"
+                                    >AI</span
+                                >
+                            </div>
+
+                            <!-- Orbiting Elements -->
+                            <div class="absolute inset-0 animate-spin-slow">
+                                <!-- Data -->
+                                <div
+                                    class="absolute top-0 left-1/2 transform -translate-x-1/2 w-16 h-16 bg-white/20 rounded-lg flex items-center justify-center"
+                                >
+                                    <span class="text-sm font-bold">Data</span>
+                                </div>
+                                <!-- Analytics -->
+                                <div
+                                    class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-16 h-16 bg-white/20 rounded-lg flex items-center justify-center"
+                                >
+                                    <span class="text-sm font-bold">BI</span>
+                                </div>
+                                <!-- Dashboard -->
+                                <div
+                                    class="absolute left-0 top-1/2 transform -translate-y-1/2 w-16 h-16 bg-white/20 rounded-lg flex items-center justify-center"
+                                >
+                                    <span class="text-xs font-bold">Board</span>
+                                </div>
+                                <!-- Agent -->
+                                <div
+                                    class="absolute right-0 top-1/2 transform -translate-y-1/2 w-16 h-16 bg-white/20 rounded-lg flex items-center justify-center"
+                                >
+                                    <span class="text-sm font-bold">Agent</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- AI Services -->
+            <div class="mb-16">
+                <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">
+                    บริการ AI ที่เราให้
+                </h2>
+
+                <div
+                    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+                >
+                    <!-- AI Consulting -->
+                    <div
+                        class="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow border border-purple-100"
+                    >
+                        <div
+                            class="w-16 h-16 bg-gradient-to-br from-purple-500 to-indigo-600 rounded-xl flex items-center justify-center mb-6"
+                        >
+                            <svg
+                                class="w-8 h-8 text-white"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
+                                ></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">
+                            คำปรึกษา AI Strategy
+                        </h3>
+                        <p class="text-gray-600 leading-relaxed mb-6">
+                            วิเคราะห์ธุรกิจของคุณและให้คำแนะนำวิธีการนำ AI
+                            เข้ามาช่วยเพิ่มประสิทธิภาพ ลดต้นทุน
+                            และสร้างมูลค่าเพิ่ม
+                        </p>
+                        <ul class="space-y-2 text-sm text-gray-600">
+                            <li class="flex items-center">
+                                <span
+                                    class="w-2 h-2 bg-purple-500 rounded-full mr-2"
+                                ></span>วิเคราะห์โอกาสใช้ AI
+                            </li>
+                            <li class="flex items-center">
+                                <span
+                                    class="w-2 h-2 bg-purple-500 rounded-full mr-2"
+                                ></span>แผนการดำเนินงาน
+                            </li>
+                            <li class="flex items-center">
+                                <span
+                                    class="w-2 h-2 bg-purple-500 rounded-full mr-2"
+                                ></span>คำนวณ ROI
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Data Center Design -->
+                    <div
+                        class="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow border border-blue-100"
+                    >
+                        <div
+                            class="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-xl flex items-center justify-center mb-6"
+                        >
+                            <svg
+                                class="w-8 h-8 text-white"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"
+                                ></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">
+                            Data Center Design
+                        </h3>
+                        <p class="text-gray-600 leading-relaxed mb-6">
+                            ออกแบบและสร้างโครงสร้างข้อมูลที่เหมาะสมสำหรับการทำ
+                            Business Intelligence และ AI Analytics
+                        </p>
+                        <ul class="space-y-2 text-sm text-gray-600">
+                            <li class="flex items-center">
+                                <span
+                                    class="w-2 h-2 bg-blue-500 rounded-full mr-2"
+                                ></span>Data Warehouse Design
+                            </li>
+                            <li class="flex items-center">
+                                <span
+                                    class="w-2 h-2 bg-blue-500 rounded-full mr-2"
+                                ></span>ETL Pipeline
+                            </li>
+                            <li class="flex items-center">
+                                <span
+                                    class="w-2 h-2 bg-blue-500 rounded-full mr-2"
+                                ></span>Real-time Analytics
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- AI Dashboard -->
+                    <div
+                        class="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow border border-green-100"
+                    >
+                        <div
+                            class="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-600 rounded-xl flex items-center justify-center mb-6"
+                        >
+                            <svg
+                                class="w-8 h-8 text-white"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
+                                ></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">
+                            AI Dashboard
+                        </h3>
+                        <p class="text-gray-600 leading-relaxed mb-6">
+                            สร้าง Dashboard แบบ Interactive
+                            ที่แสดงข้อมูลเชิงลึกจาก AI Analysis พร้อม Real-time
+                            Monitoring
+                        </p>
+                        <ul class="space-y-2 text-sm text-gray-600">
+                            <li class="flex items-center">
+                                <span
+                                    class="w-2 h-2 bg-green-500 rounded-full mr-2"
+                                ></span>Real-time Dashboard
+                            </li>
+                            <li class="flex items-center">
+                                <span
+                                    class="w-2 h-2 bg-green-500 rounded-full mr-2"
+                                ></span>Predictive Analytics
+                            </li>
+                            <li class="flex items-center">
+                                <span
+                                    class="w-2 h-2 bg-green-500 rounded-full mr-2"
+                                ></span>Custom Visualization
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- AI Agent Development -->
+                    <div
+                        class="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow border border-orange-100"
+                    >
+                        <div
+                            class="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-600 rounded-xl flex items-center justify-center mb-6"
+                        >
+                            <svg
+                                class="w-8 h-8 text-white"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                                ></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">
+                            AI Agent Development
+                        </h3>
+                        <p class="text-gray-600 leading-relaxed mb-6">
+                            พัฒนา AI Agent
+                            ที่สามารถทำงานอัตโนมัติและตอบสนองต่อสถานการณ์ต่างๆ
+                            ในธุรกิจของคุณ
+                        </p>
+                        <ul class="space-y-2 text-sm text-gray-600">
+                            <li class="flex items-center">
+                                <span
+                                    class="w-2 h-2 bg-orange-500 rounded-full mr-2"
+                                ></span>Chatbot Development
+                            </li>
+                            <li class="flex items-center">
+                                <span
+                                    class="w-2 h-2 bg-orange-500 rounded-full mr-2"
+                                ></span>Process Automation
+                            </li>
+                            <li class="flex items-center">
+                                <span
+                                    class="w-2 h-2 bg-orange-500 rounded-full mr-2"
+                                ></span>Decision Support
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- AI Prompt Engineering -->
+                    <div
+                        class="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow border border-pink-100"
+                    >
+                        <div
+                            class="w-16 h-16 bg-gradient-to-br from-pink-500 to-purple-600 rounded-xl flex items-center justify-center mb-6"
+                        >
+                            <svg
+                                class="w-8 h-8 text-white"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"
+                                ></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">
+                            AI Prompt Engineering
+                        </h3>
+                        <p class="text-gray-600 leading-relaxed mb-6">
+                            ออกแบบและพัฒนา AI Prompt
+                            ที่มีประสิทธิภาพสำหรับงานเฉพาะด้านในธุรกิจของคุณ
+                        </p>
+                        <ul class="space-y-2 text-sm text-gray-600">
+                            <li class="flex items-center">
+                                <span
+                                    class="w-2 h-2 bg-pink-500 rounded-full mr-2"
+                                ></span>Custom Prompt Design
+                            </li>
+                            <li class="flex items-center">
+                                <span
+                                    class="w-2 h-2 bg-pink-500 rounded-full mr-2"
+                                ></span>Prompt Optimization
+                            </li>
+                            <li class="flex items-center">
+                                <span
+                                    class="w-2 h-2 bg-pink-500 rounded-full mr-2"
+                                ></span>AI Model Integration
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- ERP Integration -->
+                    <div
+                        class="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow border border-indigo-100"
+                    >
+                        <div
+                            class="w-16 h-16 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-xl flex items-center justify-center mb-6"
+                        >
+                            <svg
+                                class="w-8 h-8 text-white"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"
+                                ></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">
+                            ERP AI Integration
+                        </h3>
+                        <p class="text-gray-600 leading-relaxed mb-6">
+                            เชื่อมต่อ AI เข้ากับระบบ ERP ที่มีอยู่
+                            เพื่อเพิ่มความสามารถในการวิเคราะห์และตัดสินใจ
+                        </p>
+                        <ul class="space-y-2 text-sm text-gray-600">
+                            <li class="flex items-center">
+                                <span
+                                    class="w-2 h-2 bg-indigo-500 rounded-full mr-2"
+                                ></span>System Integration
+                            </li>
+                            <li class="flex items-center">
+                                <span
+                                    class="w-2 h-2 bg-indigo-500 rounded-full mr-2"
+                                ></span>Workflow Automation
+                            </li>
+                            <li class="flex items-center">
+                                <span
+                                    class="w-2 h-2 bg-indigo-500 rounded-full mr-2"
+                                ></span>Intelligent Reporting
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Benefits Section -->
+            <div
+                class="bg-gradient-to-r from-gray-50 to-blue-50 rounded-2xl p-12 mb-16"
+            >
+                <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">
+                    ประโยชน์ที่จะได้รับ
+                </h2>
+
+                <div
+                    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
+                >
+                    <div class="text-center">
+                        <div
+                            class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4"
+                        >
+                            <svg
+                                class="w-8 h-8 text-green-600"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">
+                            เพิ่มประสิทธิภาพ
+                        </h3>
+                        <p class="text-gray-600">
+                            ลดเวลาทำงานและเพิ่มความแม่นยำ
+                        </p>
+                    </div>
+
+                    <div class="text-center">
+                        <div
+                            class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4"
+                        >
+                            <svg
+                                class="w-8 h-8 text-blue-600"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"
+                                ></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">
+                            ลดต้นทุน
+                        </h3>
+                        <p class="text-gray-600">
+                            ประหยัดค่าใช้จ่ายในการดำเนินงาน
+                        </p>
+                    </div>
+
+                    <div class="text-center">
+                        <div
+                            class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4"
+                        >
+                            <svg
+                                class="w-8 h-8 text-purple-600"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
+                                ></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">
+                            ข้อมูลเชิงลึก
+                        </h3>
+                        <p class="text-gray-600">
+                            วิเคราะห์ข้อมูลเพื่อการตัดสินใจ
+                        </p>
+                    </div>
+
+                    <div class="text-center">
+                        <div
+                            class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4"
+                        >
+                            <svg
+                                class="w-8 h-8 text-orange-600"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2-2v2m8 0V6a2 2 0 00-2 2H6a2 2 0 00-2-2V4m14 4v8a2 2 0 01-2 2H4a2 2 0 01-2-2V8a2 2 0 012-2h16a2 2 0 012 2z"
+                                ></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">
+                            ได้เปรียบคู่แข่ง
+                        </h3>
+                        <p class="text-gray-600">นำเทคโนโลยี AI มาใช้ก่อนใคร</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact CTA -->
+            <div class="text-center">
+                <h2 class="text-3xl font-bold text-gray-900 mb-6">
+                    พร้อมเริ่มต้นกับ AI แล้วหรือยัง?
+                </h2>
+                <p class="text-xl text-gray-600 mb-8">
+                    ปรึกษาฟรี! เราจะช่วยวิเคราะห์และแนะนำแนวทางการใช้ AI
+                    ที่เหมาะสมกับธุรกิจของคุณ
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a
+                        href="/contact"
+                        class="inline-flex items-center justify-center px-8 py-4 bg-purple-600 text-white font-semibold rounded-lg hover:bg-purple-700 transition-colors"
+                    >
+                        <span>ปรึกษาฟรี</span>
+                        <svg
+                            class="w-5 h-5 ml-2"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M9 5l7 7-7 7"></path>
+                        </svg>
+                    </a>
+                    <a
+                        href="tel:0814345533"
+                        class="inline-flex items-center justify-center px-8 py-4 border-2 border-purple-600 text-purple-600 font-semibold rounded-lg hover:bg-purple-50 transition-colors"
+                    >
+                        <svg
+                            class="w-5 h-5 mr-2"
+                            fill="currentColor"
+                            viewBox="0 0 20 20"
+                        >
+                            <path
+                                d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"
+                            ></path>
+                        </svg>
+                        <span>โทรเลย 081-434-5533</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</Layout>
+
+<style>
+    @keyframes spin-slow {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
+    .animate-spin-slow {
+        animation: spin-slow 20s linear infinite;
+    }
+</style>
