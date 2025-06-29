@@ -1,8 +1,22 @@
 ---
 import Layout from "../../layouts/Layout.astro";
+import Breadcrumb from "../../components/Breadcrumb.astro";
+
+const breadcrumbItems = [
+    { name: "หน้าแรก", url: "/" },
+    { name: "ผลิตภัณฑ์", url: "/products/" },
+    { name: "SML Account", url: "/products/sml-account/" }
+];
 ---
 
-<Layout title="SML Account - ระบบบัญชี ERP ครบวงจร - SML Soft">
+<Layout 
+    title="SML Account - โปรแกรมบัญชี ERP ครบวงจร สำหรับ SMEs ไทย"
+    description="SML Account - โปรแกรมบัญชี ERP ครบวงจร ระบบจัดการธุรกิจ สำหรับ SMEs ไทย | บัญชีแยกประเภท งบการเงิน จัดการสต็อก CRM | ใช้งานง่าย ราคาย่อมเยา"
+    keywords="โปรแกรมบัญชี, SML Account, ระบบ ERP, โปรแกรม ERP ไทย, ระบบบัญชี SMEs, โปรแกรมจัดการธุรกิจ, ระบบบัญชีออนไลน์, ERP Software Thailand, บัญชีแยกประเภท, งบการเงิน, ระบบ CRM"
+    canonicalUrl="https://www.smlsoft.com/products/sml-account/"
+    schemaType="Product"
+>
+    <Breadcrumb items={breadcrumbItems} />
     <main>
         <!-- Hero Section -->
         <section class="bg-gradient-to-br from-blue-50 to-indigo-100 py-20">

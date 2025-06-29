@@ -1,0 +1,32 @@
+{
+    "files.associations": {
+        "docs/**/*.md": "markdown"
+    },
+    "github.copilot.enable": {
+        "markdown": false,
+        "docs/**": false
+    },
+    "github.copilot.excludes": [
+        "docs/**",
+        "docs/*.md",
+        "docs/**/*.md",
+        "docs/**/*.txt",
+        "docs/**/*.json"
+    ],
+    "files.exclude": {
+        "docs/**": false
+    },
+    "files.readOnly": {
+        "docs/**": true
+    },
+    "editor.suggest.showFiles": false,
+    "editor.suggest.showFolders": false,
+    "editor.quickSuggestions": {
+        "strings": false,
+        "comments": false,
+        "other": false
+    },
+    "editor.wordBasedSuggestions": "off",
+    "editor.parameterHints.enabled": false,
+    "editor.suggestOnTriggerCharacters": false
+}

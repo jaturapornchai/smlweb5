@@ -1,8 +1,22 @@
 ---
 import Layout from "../../layouts/Layout.astro";
+import Breadcrumb from "../../components/Breadcrumb.astro";
+
+const breadcrumbItems = [
+    { name: "หน้าแรก", url: "/" },
+    { name: "ผลิตภัณฑ์", url: "/products/" },
+    { name: "SML POS", url: "/products/sml-pos/" }
+];
 ---
 
-<Layout title="SML POS - ระบบขายหน้าร้านครบครัน - SML Soft">
+<Layout 
+    title="SML POS - โปรแกรม POS ระบบขายหน้าร้าน ครบครัน สำหรับ SMEs ไทย"
+    description="SML POS - โปรแกรม POS ระบบขายหน้าร้านครบครัน สำหรับ SMEs ไทย | จัดการขาย สต็อก บาร์โค้ด พิมพ์ใบเสร็จ รายงานยอดขาย | รองรับทุกธุรกิจ ใช้งานง่าย"
+    keywords="โปรแกรม POS, SML POS, ระบบขายหน้าร้าน, โปรแกรมขายหน้าร้าน, POS Software Thailand, ระบบ POS ไทย, โปรแกรมจัดการร้านค้า, บาร์โค้ด, พิมพ์ใบเสร็จ, ระบบขาย SMEs, Point of Sale"
+    canonicalUrl="https://www.smlsoft.com/products/sml-pos/"
+    schemaType="Product"
+>
+    <Breadcrumb items={breadcrumbItems} />
     <main>
         <!-- Hero Section -->
         <section class="bg-gradient-to-br from-green-50 to-emerald-100 py-20">

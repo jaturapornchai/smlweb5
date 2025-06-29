@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+    
+    <!-- Homepage -->
+    <url>
+        <loc>https://www.smlsoft.com/</loc>
+        <lastmod>2025-06-28</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    
+    <!-- AI Solutions Page -->
+    <url>
+        <loc>https://www.smlsoft.com/ai-solutions/</loc>
+        <lastmod>2025-06-28</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <!-- Solutions Page -->
+    <url>
+        <loc>https://www.smlsoft.com/solutions/</loc>
+        <lastmod>2025-06-28</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <!-- Accounting Office Page -->
+    <url>
+        <loc>https://www.smlsoft.com/accounting-office/</loc>
+        <lastmod>2025-06-28</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <!-- Features Page -->
+    <url>
+        <loc>https://www.smlsoft.com/features/</loc>
+        <lastmod>2025-06-28</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <!-- Pricing Page -->
+    <url>
+        <loc>https://www.smlsoft.com/pricing/</loc>
+        <lastmod>2025-06-28</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <!-- Contact Page -->
+    <url>
+        <loc>https://www.smlsoft.com/contact/</loc>
+        <lastmod>2025-06-28</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <!-- Product Pages -->
+    <url>
+        <loc>https://www.smlsoft.com/products/sml-account/</loc>
+        <lastmod>2025-06-28</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <url>
+        <loc>https://www.smlsoft.com/products/sml-pos/</loc>
+        <lastmod>2025-06-28</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+</urlset>

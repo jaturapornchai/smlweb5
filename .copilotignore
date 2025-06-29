@@ -1,0 +1,35 @@
+# .copilotignore
+# GitHub Copilot Ignore File for SML Soft Project
+
+# CRITICAL: Prevent GitHub Copilot from modifying documentation
+docs/**
+docs/*.md
+docs/**/*.md
+docs/**/*.txt
+docs/**/*.json
+
+# Protect all markdown files in docs folder
+**docs**/*.md
+**docs**/**/*.md
+
+# Additional protection patterns
+docs/
+docs/*
+docs/**/*
+
+# Prevent suggestions for documentation files
+*.md in docs/
+**docs**
+
+# Block access to specific documentation types
+docs/specifications/
+docs/requirements/
+docs/business-logic/
+docs/configurations/
+docs/security/
+
+# Protect GitHub configuration (read-only for reference)
+.github/copilot-instructions.md
+.github/README.md
+
+# End of .copilotignore

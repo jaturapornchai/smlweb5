@@ -1,9 +1,23 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Breadcrumb from "../components/Breadcrumb.astro";
+
+const breadcrumbItems = [
+    { text: "หน้าหลัก", href: "/" },
+    { text: "สำนักงานบัญชี", href: "/accounting-office" }
+];
 ---
 
-<Layout title="สำนักงานบัญชี - SML Soft">
+<Layout 
+    title="โซลูชั่นสำนักงานบัญชี - ระบบบัญชีครบวงจร | SML Soft"
+    description="ระบบบัญชีครบวงจรสำหรับสำนักงานบัญชี รองรับการทำงานหลายบริษัท พร้อมเครื่องมือการจัดการที่ทันสมัย AI-powered และ Cloud-based"
+    keywords="สำนักงานบัญชี, ระบบบัญชีสำนักงาน, โปรแกรมบัญชีสำนักงาน, ระบบบัญชีครบวงจร, บัญชีหลายบริษัท, ซอฟต์แวร์บัญชี, SML Account Office, โปรแกรมบัญชีมืออาชีพ, ระบบบัญชี AI, Cloud Accounting"
+    canonicalUrl="https://www.smlsoft.com/accounting-office/"
+    schemaType="Service"
+>
     <main>
+        <Breadcrumb items={breadcrumbItems} />
+        
         <!-- Hero Section -->
         <section class="bg-gradient-to-br from-blue-50 to-indigo-100 py-20">
             <div class="container mx-auto px-4">

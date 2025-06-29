@@ -1,0 +1,29 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://www.smlsoft.com/sitemap.xml
+
+# Disallow admin and temporary files
+Disallow: /admin/
+Disallow: /.well-known/
+Disallow: /*.log
+Disallow: /temp/
+
+# Allow important resources
+Allow: /assets/
+Allow: /_astro/
+Allow: /favicon.svg
+
+# Crawl-delay
+Crawl-delay: 1
+
+# Additional directives for better SEO
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: facebookexternalhit
+Allow: /

@@ -6,48 +6,167 @@ import Footer from "../components/Footer.astro";
 export interface Props {
 	title: string;
 	description?: string;
+	keywords?: string;
+	ogImage?: string;
+	canonicalUrl?: string;
+	articlePublished?: string;
+	articleModified?: string;
+	schemaType?: string;
 }
 
-const { title, description } = Astro.props;
+const { 
+	title, 
+	description, 
+	keywords, 
+	ogImage, 
+	canonicalUrl, 
+	articlePublished, 
+	articleModified,
+	schemaType = "Organization"
+} = Astro.props;
+
+const defaultDescription = "SML Soft - โปรแกรมบัญชี POS ERP ระบบ AI ครบวงจร สำหรับ SMEs ไทย | Digital Transformation | AI Solutions | Cloud Computing";
+const defaultKeywords = "โปรแกรมบัญชี, โปรแกรม POS, ระบบ ERP, AI สำหรับธุรกิจ, Digital Transformation, Cloud Computing, SMEs Thailand, โปรแกรมจัดการร้านค้า, ระบบบัญชีออนไลน์, AI Agent, Agentic AI";
+const siteUrl = "https://www.smlsoft.com";
+const currentUrl = canonicalUrl || `${siteUrl}${Astro.url.pathname}`;
+const fullTitle = title ? `${title} | SML Soft - โปรแกรมบัญชี POS ERP AI` : "SML Soft - โปรแกรมบัญชี POS ERP AI สำหรับ SMEs ไทย";
+
+// Structured Data
+const structuredData = {
+	"@context": "https://schema.org",
+	"@type": schemaType,
+	"name": "SML Soft",
+	"alternateName": "บริษัท เอสเอ็มแอล ซอฟต์ จำกัด",
+	"description": description || defaultDescription,
+	"url": siteUrl,
+	"logo": `${siteUrl}/favicon.svg`,
+	"sameAs": [
+		"https://www.facebook.com/smlsoft",
+		"https://line.me/R/ti/p/@smlsoft"
+	],
+	"contactPoint": {
+		"@type": "ContactPoint",
+		"telephone": "+66814345533",
+		"contactType": "customer service",
+		"areaServed": "TH",
+		"availableLanguage": "Thai"
+	},
+	"address": {
+		"@type": "PostalAddress",
+		"addressCountry": "TH",
+		"addressLocality": "Bangkok"
+	},
+	"offers": {
+		"@type": "Offer",
+		"name": "โปรแกรมบัญชี POS ERP AI Solutions",
+		"description": "ระบบจัดการธุรกิจครบวงจร พร้อม AI Technology"
+	}
+};
+
+if (schemaType === "Article" && articlePublished) {
+	structuredData["@type"] = "Article";
+	structuredData.headline = title;
+	structuredData.datePublished = articlePublished;
+	structuredData.dateModified = articleModified || articlePublished;
+	structuredData.author = {
+		"@type": "Organization",
+		"name": "SML Soft"
+	};
+}
 ---
 
 <!doctype html>
-<html lang="th">
+<html lang="th" prefix="og: https://ogp.me/ns#">
 	<head>
 		<meta charset="UTF-8" />
-		<meta
-			name="viewport"
-			content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes"
-		/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes" />
+		<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+		<meta name="googlebot" content="index, follow" />
+		
+		<!-- Canonical URL -->
+		<link rel="canonical" href={currentUrl} />
+		
+		<!-- Favicon and Icons -->
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="apple-touch-icon" href="/favicon.svg" />
+		
+		<!-- Generator -->
 		<meta name="generator" content={Astro.generator} />
-		<meta
-			name="description"
-			content={description ||
-				"SML Soft - บริษัทพัฒนาโปรแกรมบัญชีและ POS ครบวงจร"}
-		/>
-		<title>{title} | SML Soft</title>
-
-		<!-- Preconnect to Google Fonts -->
+		
+		<!-- Primary Meta Tags -->
+		<title>{fullTitle}</title>
+		<meta name="title" content={fullTitle} />
+		<meta name="description" content={description || defaultDescription} />
+		<meta name="keywords" content={keywords || defaultKeywords} />
+		<meta name="author" content="SML Soft - บริษัท เอสเอ็มแอล ซอฟต์ จำกัด" />
+		<meta name="language" content="Thai" />
+		<meta name="revisit-after" content="7 days" />
+		
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content={schemaType === "Article" ? "article" : "website"} />
+		<meta property="og:url" content={currentUrl} />
+		<meta property="og:title" content={fullTitle} />
+		<meta property="og:description" content={description || defaultDescription} />
+		<meta property="og:image" content={ogImage || `${siteUrl}/favicon.svg`} />
+		<meta property="og:site_name" content="SML Soft" />
+		<meta property="og:locale" content="th_TH" />
+		
+		<!-- Twitter -->
+		<meta property="twitter:card" content="summary_large_image" />
+		<meta property="twitter:url" content={currentUrl} />
+		<meta property="twitter:title" content={fullTitle} />
+		<meta property="twitter:description" content={description || defaultDescription} />
+		<meta property="twitter:image" content={ogImage || `${siteUrl}/favicon.svg`} />
+		
+		<!-- Additional Business Meta -->
+		<meta name="geo.region" content="TH" />
+		<meta name="geo.placename" content="Bangkok" />
+		<meta name="business.contact_data.street_address" content="Bangkok, Thailand" />
+		<meta name="business.contact_data.locality" content="Bangkok" />
+		<meta name="business.contact_data.region" content="TH" />
+		<meta name="business.contact_data.country_name" content="Thailand" />
+		<meta name="business.contact_data.phone_number" content="+66814345533" />
+		
+		<!-- Preconnect to External Resources -->
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link rel="preconnect" href="https://www.googletagmanager.com" />
+		
+		<!-- DNS Prefetch -->
+		<link rel="dns-prefetch" href="//fonts.googleapis.com" />
+		<link rel="dns-prefetch" href="//www.google-analytics.com" />
+		
+		<!-- Fonts -->
 		<link
 			href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;600;700&display=swap"
 			rel="stylesheet"
 		/>
-
+		
+		<!-- Structured Data -->
+		<script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+		
 		<!-- Google Analytics -->
-		<script
-			async
-			src="https://www.googletagmanager.com/gtag/js?id=G-KVZRB8RF05"
-		></script>
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-KVZRB8RF05"></script>
 		<script is:inline>
 			window.dataLayer = window.dataLayer || [];
 			function gtag() {
 				dataLayer.push(arguments);
 			}
 			gtag("js", new Date());
-			gtag("config", "G-KVZRB8RF05");
+			gtag("config", "G-KVZRB8RF05", {
+				page_title: document.title,
+				page_location: window.location.href
+			});
+		</script>
+
+		<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=AW-1054730371"></script>
+		<script is:inline>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+
+			gtag('config', 'AW-1054730371');
 		</script>
 	</head>
 	<body class="font-thai bg-gray-50 overflow-x-hidden">

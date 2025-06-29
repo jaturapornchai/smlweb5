@@ -1,12 +1,23 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Breadcrumb from "../components/Breadcrumb.astro";
+
+const breadcrumbItems = [
+    { text: "หน้าหลัก", href: "/" },
+    { text: "โซลูชั่นครบวงจร", href: "/solutions" }
+];
 ---
 
 <Layout
-    title="โซลูชั่นครบวงจร"
-    description="โซลูชั่นซอฟต์แวร์ครบวงจรสำหรับทุกประเภทธุรกิจ ตั้งแต่ระบบบัญชี POS ไปจนถึง AI และ Custom Development"
+    title="โซลูชั่นซอฟต์แวร์ครบวงจร - ERP, AI, Custom Development | SML Soft"
+    description="โซลูชั่นซอฟต์แวร์ครบวงจรสำหรับทุกประเภทธุรกิจ ตั้งแต่ระบบบัญชี POS ERP ไปจนถึง AI Solutions และ Custom Development ด้วยประสบการณ์กว่า 20 ปี"
+    keywords="โซลูชั่นซอฟต์แวร์, ERP ระบบ, AI Solutions, Custom Development, ระบบบัญชี, โปรแกรม POS, ซอฟต์แวร์ธุรกิจ, Digital Transformation, Cloud Solutions, โซลูชั่นครบวงจร, SML Soft"
+    canonicalUrl="https://www.smlsoft.com/solutions/"
+    schemaType="Service"
 >
     <div class="py-20">
+        <Breadcrumb items={breadcrumbItems} />
+        
         <div class="container mx-auto px-4">
             <!-- Hero Section -->
             <div class="text-center mb-16">
