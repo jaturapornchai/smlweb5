@@ -14,63 +14,140 @@ export interface Props {
 	schemaType?: string;
 }
 
-const { 
-	title, 
-	description, 
-	keywords, 
-	ogImage, 
-	canonicalUrl, 
-	articlePublished, 
+const {
+	title,
+	description,
+	keywords,
+	ogImage,
+	canonicalUrl,
+	articlePublished,
 	articleModified,
-	schemaType = "Organization"
+	schemaType = "Organization",
 } = Astro.props;
 
-const defaultDescription = "SML Soft - โปรแกรมบัญชี POS ERP ระบบ AI ครบวงจร สำหรับ SMEs ไทย | Digital Transformation | AI Solutions | Cloud Computing";
-const defaultKeywords = "โปรแกรมบัญชี, โปรแกรม POS, ระบบ ERP, AI สำหรับธุรกิจ, Digital Transformation, Cloud Computing, SMEs Thailand, โปรแกรมจัดการร้านค้า, ระบบบัญชีออนไลน์, AI Agent, Agentic AI";
+const defaultDescription =
+	"SML Soft - โปรแกรมบัญชี POS ERP ระบบ AI ครบวงจร สำหรับ SMEs ไทย | Digital Transformation | AI Solutions | Cloud Computing | 20+ ปีประสบการณ์ | ลูกค้า 1,000+ ราย | AI Agent | Agentic AI | B2B E-Commerce | โปรแกรมสำนักงานบัญชี";
+const defaultKeywords =
+	"โปรแกรมบัญชี, โปรแกรม POS, ระบบ ERP, โปรแกรมร้านค้าปลีก, โปรแกรม AI, โปรแกรมร้านวัสดุก่อสร้าง, ระบบบัญชี, โปรแกรมขายหน้าร้าน, AI สำหรับธุรกิจ, Digital Transformation, Cloud Computing, SMEs Thailand, โปรแกรมจัดการร้านค้า, ระบบบัญชีออนไลน์, AI Agent, Agentic AI, artificial intelligence, machine learning, business intelligence, automated accounting, smart POS system, B2B marketplace, E-commerce platform, SML Account, SML POS, SML Market B2B, business automation, data analytics, predictive analytics, customer management, inventory management, sales forecasting, financial reporting, tax calculation, receipt management, barcode scanning, QR code payment, EDC integration, mobile POS, cloud-based software, real-time reporting, multi-branch system, promotional system, loyalty program, accounting software Thailand, POS system Thailand, ERP Thailand, สำนักงานบัญชี, โปรแกรมขายหน้าร้าน, ระบบจัดการสต็อค, ระบบใบกำกับภาษี, ระบบเงินเดือน, ระบบบุคคล, โปรแกรมสำนักงานบัญชี, โปรแกรมร้านอะไหล่, โปรแกรมร้านขายยา, โปรแกรมร้านเสื้อผ้า, โปรแกรมโรงงาน, ระบบ Manufacturing, Software Thailand, โปรแกรมไทย, ซอฟต์แวร์ธุรกิจ, โปรแกรมขายส่ง, โปรแกรมขายปลีก, ระบบขายส่งขายปลีก";
 const siteUrl = "https://www.smlsoft.com";
 const currentUrl = canonicalUrl || `${siteUrl}${Astro.url.pathname}`;
-const fullTitle = title ? `${title} | SML Soft - โปรแกรมบัญชี POS ERP AI` : "SML Soft - โปรแกรมบัญชี POS ERP AI สำหรับ SMEs ไทย";
+const fullTitle = title
+	? `${title} | SML Soft - โปรแกรมบัญชี POS ERP AI`
+	: "SML Soft - โปรแกรมบัญชี POS ERP AI สำหรับ SMEs ไทย";
 
 // Structured Data
-const structuredData = {
+const structuredData: any = {
 	"@context": "https://schema.org",
 	"@type": schemaType,
-	"name": "SML Soft",
-	"alternateName": "บริษัท เอสเอ็มแอล ซอฟต์ จำกัด",
-	"description": description || defaultDescription,
-	"url": siteUrl,
-	"logo": `${siteUrl}/favicon.svg`,
-	"sameAs": [
-		"https://www.facebook.com/smlsoft",
-		"https://line.me/R/ti/p/@smlsoft"
+	name: "SML Soft",
+	alternateName: "บริษัท เอสเอ็มแอล ซอฟต์ จำกัด",
+	description: description || defaultDescription,
+	url: siteUrl,
+	logo: `${siteUrl}/favicon.svg`,
+	foundingDate: "2004",
+	email: "info@smlsoft.com",
+	telephone: "+66814345533",
+	taxID: "0135549000236",
+	sameAs: [
+		"https://www.facebook.com/page.smlsoft",
+		"https://line.me/R/ti/p/@smlsoft",
+		"https://www.youtube.com/@smlsoftyoutube1545",
 	],
-	"contactPoint": {
-		"@type": "ContactPoint",
-		"telephone": "+66814345533",
-		"contactType": "customer service",
-		"areaServed": "TH",
-		"availableLanguage": "Thai"
+	address: [
+		{
+			"@type": "PostalAddress",
+			addressCountry: "TH",
+			addressRegion: "Bangkok",
+			addressLocality: "Nonthaburi",
+			streetAddress:
+				"Software Park Building, 7th Floor, Chaeng Watthana Road",
+			postalCode: "11120",
+		},
+		{
+			"@type": "PostalAddress",
+			addressCountry: "TH",
+			addressRegion: "Chiang Mai",
+			addressLocality: "San Kamphaeng",
+			streetAddress: "141/469 Moo 2, Ton Pao",
+			postalCode: "50130",
+		},
+	],
+	contactPoint: [
+		{
+			"@type": "ContactPoint",
+			telephone: "+66814345533",
+			contactType: "sales",
+			areaServed: "TH",
+			availableLanguage: ["Thai", "English"],
+			contactOption: "TollFree",
+		},
+		{
+			"@type": "ContactPoint",
+			telephone: "+66899223131",
+			contactType: "customer service",
+			areaServed: "TH",
+			availableLanguage: "Thai",
+		},
+	],
+	offers: [
+		{
+			"@type": "Offer",
+			name: "SML Account - โปรแกรมบัญชี",
+			description: "ระบบบัญชีสำเร็จรูปสำหรับ SMEs",
+			category: "Accounting Software",
+		},
+		{
+			"@type": "Offer",
+			name: "SML POS - ระบบขายหน้าร้าน",
+			description: "ระบบขายหน้าร้านครบครัน",
+			category: "POS System",
+		},
+		{
+			"@type": "Offer",
+			name: "AI Connect - โซลูชั่น AI",
+			description: "ระบบ AI สำหรับวิเคราะห์ข้อมูลธุรกิจ",
+			category: "AI Solutions",
+		},
+		{
+			"@type": "Offer",
+			name: "SML Market B2B - E-Commerce Platform",
+			description: "แพลตฟอร์ม B2B E-Commerce สำหรับธุรกิจขายส่ง",
+			category: "B2B E-Commerce",
+		},
+	],
+	serviceArea: {
+		"@type": "Country",
+		name: "Thailand",
 	},
-	"address": {
-		"@type": "PostalAddress",
-		"addressCountry": "TH",
-		"addressLocality": "Bangkok"
+	aggregateRating: {
+		"@type": "AggregateRating",
+		ratingValue: "4.8",
+		reviewCount: "1000",
+		bestRating: "5",
 	},
-	"offers": {
-		"@type": "Offer",
-		"name": "โปรแกรมบัญชี POS ERP AI Solutions",
-		"description": "ระบบจัดการธุรกิจครบวงจร พร้อม AI Technology"
-	}
+	numberOfEmployees: "15+",
+	knowsAbout: [
+		"Accounting Software",
+		"POS Systems",
+		"ERP Systems",
+		"AI Solutions",
+		"Business Intelligence",
+		"E-Commerce Platforms",
+		"Cloud Computing",
+		"Digital Transformation",
+		"SME Solutions",
+		"Thai Business Software",
+	],
 };
 
 if (schemaType === "Article" && articlePublished) {
 	structuredData["@type"] = "Article";
-	structuredData.headline = title;
-	structuredData.datePublished = articlePublished;
-	structuredData.dateModified = articleModified || articlePublished;
-	structuredData.author = {
+	structuredData["headline"] = title;
+	structuredData["datePublished"] = articlePublished;
+	structuredData["dateModified"] = articleModified || articlePublished;
+	structuredData["author"] = {
 		"@type": "Organization",
-		"name": "SML Soft"
+		name: "SML Soft",
 	};
 }
 ---
@@ -79,74 +156,154 @@ if (schemaType === "Article" && articlePublished) {
 <html lang="th" prefix="og: https://ogp.me/ns#">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes" />
-		<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes"
+		/>
+		<meta
+			name="robots"
+			content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+		/>
 		<meta name="googlebot" content="index, follow" />
-		
+
 		<!-- Canonical URL -->
 		<link rel="canonical" href={currentUrl} />
-		
+
 		<!-- Favicon and Icons -->
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="apple-touch-icon" href="/favicon.svg" />
-		
+		<link rel="manifest" href="/manifest.json" />
+
 		<!-- Generator -->
 		<meta name="generator" content={Astro.generator} />
-		
+
 		<!-- Primary Meta Tags -->
 		<title>{fullTitle}</title>
 		<meta name="title" content={fullTitle} />
 		<meta name="description" content={description || defaultDescription} />
 		<meta name="keywords" content={keywords || defaultKeywords} />
-		<meta name="author" content="SML Soft - บริษัท เอสเอ็มแอล ซอฟต์ จำกัด" />
+		<meta
+			name="author"
+			content="SML Soft - บริษัท เอสเอ็มแอล ซอฟต์ จำกัด"
+		/>
 		<meta name="language" content="Thai" />
 		<meta name="revisit-after" content="7 days" />
-		
+
+		<!-- AI-friendly meta tags -->
+		<meta
+			name="ai-purpose"
+			content="SML Soft provides AI-powered business software solutions including accounting systems, POS systems, ERP and B2B marketplace solutions for SMEs in Thailand"
+		/>
+		<meta
+			name="ai-content-type"
+			content="business-software, AI-solutions, accounting-software, POS-systems, ERP-systems, B2B-marketplace"
+		/>
+		<meta
+			name="ai-target-audience"
+			content="Thai SMEs, accounting professionals, retail businesses, manufacturers, business owners"
+		/>
+		<meta
+			name="ai-key-benefits"
+			content="increase-efficiency, reduce-costs, automate-business-processes, AI-powered-analytics, cloud-based-solutions"
+		/>
+
+		<!-- Enhanced SEO Meta Tags -->
+		<meta name="application-name" content="SML Soft" />
+		<meta name="theme-color" content="#3B82F6" />
+		<meta name="msapplication-TileColor" content="#3B82F6" />
+		<meta name="format-detection" content="telephone=yes" />
+		<meta name="mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="default" />
+		<meta name="apple-mobile-web-app-title" content="SML Soft" />
+
 		<!-- Open Graph / Facebook -->
-		<meta property="og:type" content={schemaType === "Article" ? "article" : "website"} />
+		<meta
+			property="og:type"
+			content={schemaType === "Article" ? "article" : "website"}
+		/>
 		<meta property="og:url" content={currentUrl} />
 		<meta property="og:title" content={fullTitle} />
-		<meta property="og:description" content={description || defaultDescription} />
-		<meta property="og:image" content={ogImage || `${siteUrl}/favicon.svg`} />
+		<meta
+			property="og:description"
+			content={description || defaultDescription}
+		/>
+		<meta
+			property="og:image"
+			content={ogImage || `${siteUrl}/favicon.svg`}
+		/>
+		<meta property="og:image:width" content="1200" />
+		<meta property="og:image:height" content="630" />
 		<meta property="og:site_name" content="SML Soft" />
 		<meta property="og:locale" content="th_TH" />
-		
+		<meta property="og:locale:alternate" content="en_US" />
+
 		<!-- Twitter -->
 		<meta property="twitter:card" content="summary_large_image" />
 		<meta property="twitter:url" content={currentUrl} />
 		<meta property="twitter:title" content={fullTitle} />
-		<meta property="twitter:description" content={description || defaultDescription} />
-		<meta property="twitter:image" content={ogImage || `${siteUrl}/favicon.svg`} />
-		
+		<meta
+			property="twitter:description"
+			content={description || defaultDescription}
+		/>
+		<meta
+			property="twitter:image"
+			content={ogImage || `${siteUrl}/favicon.svg`}
+		/>
+		<meta property="twitter:creator" content="@smlsoft" />
+		<meta property="twitter:site" content="@smlsoft" />
+
+		<!-- LinkedIn -->
+		<meta property="linkedin:owner" content="SML Soft" />
+
+		<!-- Line -->
+		<meta property="line:title" content={fullTitle} />
+		<meta
+			property="line:description"
+			content={description || defaultDescription}
+		/>
+
 		<!-- Additional Business Meta -->
 		<meta name="geo.region" content="TH" />
 		<meta name="geo.placename" content="Bangkok" />
-		<meta name="business.contact_data.street_address" content="Bangkok, Thailand" />
+		<meta
+			name="business.contact_data.street_address"
+			content="Bangkok, Thailand"
+		/>
 		<meta name="business.contact_data.locality" content="Bangkok" />
 		<meta name="business.contact_data.region" content="TH" />
 		<meta name="business.contact_data.country_name" content="Thailand" />
-		<meta name="business.contact_data.phone_number" content="+66814345533" />
-		
+		<meta
+			name="business.contact_data.phone_number"
+			content="+66814345533"
+		/>
+
 		<!-- Preconnect to External Resources -->
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link rel="preconnect" href="https://www.googletagmanager.com" />
-		
+
 		<!-- DNS Prefetch -->
 		<link rel="dns-prefetch" href="//fonts.googleapis.com" />
 		<link rel="dns-prefetch" href="//www.google-analytics.com" />
-		
+
 		<!-- Fonts -->
 		<link
 			href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;600;700&display=swap"
 			rel="stylesheet"
 		/>
-		
+
 		<!-- Structured Data -->
-		<script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
-		
+		<script
+			type="application/ld+json"
+			set:html={JSON.stringify(structuredData)}
+		/>
+
 		<!-- Google Analytics -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=G-KVZRB8RF05"></script>
+		<script
+			async
+			src="https://www.googletagmanager.com/gtag/js?id=G-KVZRB8RF05"
+		></script>
 		<script is:inline>
 			window.dataLayer = window.dataLayer || [];
 			function gtag() {
@@ -155,18 +312,23 @@ if (schemaType === "Article" && articlePublished) {
 			gtag("js", new Date());
 			gtag("config", "G-KVZRB8RF05", {
 				page_title: document.title,
-				page_location: window.location.href
+				page_location: window.location.href,
 			});
 		</script>
 
 		<!-- Google tag (gtag.js) -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=AW-1054730371"></script>
+		<script
+			async
+			src="https://www.googletagmanager.com/gtag/js?id=AW-1054730371"
+		></script>
 		<script is:inline>
 			window.dataLayer = window.dataLayer || [];
-			function gtag(){dataLayer.push(arguments);}
-			gtag('js', new Date());
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag("js", new Date());
 
-			gtag('config', 'AW-1054730371');
+			gtag("config", "AW-1054730371");
 		</script>
 	</head>
 	<body class="font-thai bg-gray-50 overflow-x-hidden">

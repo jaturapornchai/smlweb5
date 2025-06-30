@@ -7,7 +7,7 @@
     <!-- Homepage -->
     <url>
         <loc>https://www.smlsoft.com/</loc>
-        <lastmod>2025-06-28</lastmod>
+        <lastmod>2025-07-01</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -15,7 +15,7 @@
     <!-- AI Solutions Page -->
     <url>
         <loc>https://www.smlsoft.com/ai-solutions/</loc>
-        <lastmod>2025-06-28</lastmod>
+        <lastmod>2025-07-01</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
@@ -23,7 +23,7 @@
     <!-- Solutions Page -->
     <url>
         <loc>https://www.smlsoft.com/solutions/</loc>
-        <lastmod>2025-06-28</lastmod>
+        <lastmod>2025-07-01</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
