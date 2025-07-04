@@ -1,0 +1,203 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+
+const breadcrumbItems = [
+    { name: 'หน้าหลัก', url: '/' },
+    { name: 'บทความ', url: '/blog' },
+    { name: 'พื้นฐานการทำบัญชี', url: '/blog/accounting-basics' }
+];
+---
+
+<Layout 
+    title="พื้นฐานการทำบัญชี - เริ่มต้นทำบัญชีอย่างถูกต้อง | SML Soft"
+    description="เรียนรู้พื้นฐานการทำบัญชีตั้งแต่เริ่มต้น วิธีจัดทำบัญชีอย่างถูกต้องตามมาตรฐาน พร้อมเทคนิคการใช้โปรแกรมบัญชี SML Account"
+    keywords="พื้นฐานการทำบัญชี, วิธีทำบัญชี, การจัดทำบัญชี, บัญชีรายรับรายจ่าย, บัญชีแยกประเภท, งบการเงิน, โปรแกรมบัญชี"
+>
+
+<Breadcrumb items={breadcrumbItems} />
+
+<article class="py-8 bg-gray-50">
+    <div class="container mx-auto px-4 max-w-4xl">
+        <!-- Header -->
+        <header class="text-center mb-8">
+            <h1 class="text-4xl font-bold text-gray-900 mb-4">
+                🧮 พื้นฐานการทำบัญชี
+            </h1>
+            <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                เรียนรู้การทำบัญชีตั้งแต่เริ่มต้น เพื่อการจัดการธุรกิจที่มีประสิทธิภาพ
+            </p>
+            <div class="flex items-center justify-center space-x-6 mt-4 text-sm text-gray-500">
+                <span>📅 4 กรกฎาคม 2025</span>
+                <span>⏱️ อ่าน 8 นาที</span>
+                <span>👤 ทีมงาน SML Soft</span>
+            </div>
+        </header>
+
+        <!-- Content -->
+        <div class="bg-white rounded-2xl shadow-lg p-6 space-y-6">
+            
+            <!-- Introduction -->
+            <section>
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">การทำบัญชีคืออะไร?</h2>
+                <p class="text-gray-700 leading-relaxed mb-4">
+                    การทำบัญชีเป็นกระบวนการบันทึก จัดประเภท สรุป และรายงานข้อมูลทางการเงินของธุรกิจ 
+                    เพื่อใช้ในการตัดสินใจทางธุรกิจ การวางแผน และการควบคุมการดำเนินงาน
+                </p>
+                <div class="bg-blue-50 p-4 rounded-lg">
+                    <h3 class="text-lg font-semibold text-blue-900 mb-2">💡 ทำไมต้องทำบัญชี?</h3>
+                    <ul class="text-blue-800 space-y-1">
+                        <li>• ตามกฎหมายกำหนดให้ธุรกิจต้องทำบัญชี</li>
+                        <li>• เพื่อทราบฐานะการเงินที่แท้จริง</li>
+                        <li>• ช่วยในการวางแผนและตัดสินใจ</li>
+                        <li>• สำหรับการยื่นภาษีและกู้เงิน</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Basic Concepts -->
+            <section>
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">หลักการพื้นฐานของการทำบัญชี</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="bg-green-50 p-4 rounded-lg">
+                        <h3 class="text-lg font-semibold text-green-900 mb-2">📈 สินทรัพย์ (Assets)</h3>
+                        <p class="text-green-800 mb-2">สิ่งที่ธุรกิจเป็นเจ้าของและมีคุณค่า</p>
+                        <ul class="text-green-700 text-sm space-y-1">
+                            <li>• เงินสด</li>
+                            <li>• เงินฝากธนาคาร</li>
+                            <li>• สินค้าคงคลัง</li>
+                            <li>• ลูกหนี้</li>
+                            <li>• ที่ดิน อาคาร อุปกรณ์</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-red-50 p-4 rounded-lg">
+                        <h3 class="text-lg font-semibold text-red-900 mb-2">📉 หนี้สิน (Liabilities)</h3>
+                        <p class="text-red-800 mb-2">สิ่งที่ธุรกิจติดค้างหรือต้องชำระ</p>
+                        <ul class="text-red-700 text-sm space-y-1">
+                            <li>• เจ้าหนี้</li>
+                            <li>• เงินกู้</li>
+                            <li>• ค่าใช้จ่ายค้างจ่าย</li>
+                            <li>• ภาษีค้างจ่าย</li>
+                            <li>• เงินเดือนค้างจ่าย</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="bg-yellow-50 p-4 rounded-lg mt-4">
+                    <h3 class="text-lg font-semibold text-yellow-900 mb-2">💰 ส่วนของเจ้าของ (Owner's Equity)</h3>
+                    <p class="text-yellow-800 mb-2">ส่วนต่างระหว่างสินทรัพย์และหนี้สิน</p>
+                    <div class="bg-yellow-100 p-4 rounded text-center">
+                        <strong class="text-yellow-900">สินทรัพย์ = หนี้สิน + ส่วนของเจ้าของ</strong>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Accounting Cycle -->
+            <section>
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">วงจรการบัญชี</h2>
+                <div class="space-y-3">
+                    <div class="flex items-start space-x-3">
+                        <div class="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-sm">1</div>
+                        <div>
+                            <h3 class="font-semibold text-gray-900">บันทึกรายการ</h3>
+                            <p class="text-gray-600">บันทึกธุรกรรมทางการเงินทุกรายการ</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start space-x-3">
+                        <div class="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-sm">2</div>
+                        <div>
+                            <h3 class="font-semibold text-gray-900">ผ่านรายการ</h3>
+                            <p class="text-gray-600">ผ่านรายการไปยังบัญชีแยกประเภท</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start space-x-3">
+                        <div class="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-sm">3</div>
+                        <div>
+                            <h3 class="font-semibold text-gray-900">ทำงบทดลอง</h3>
+                            <p class="text-gray-600">ตรวจสอบความถูกต้องของยอดคงเหลือ</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start space-x-3">
+                        <div class="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-sm">4</div>
+                        <div>
+                            <h3 class="font-semibold text-gray-900">จัดทำงบการเงิน</h3>
+                            <p class="text-gray-600">งบกำไรขาดทุน งบดุล งบกระแสเงินสด</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SML Account Benefits -->
+            <section>
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">SML Account ช่วยให้การทำบัญชีง่ายขึ้น</h2>
+                <div class="bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl p-6 text-white">
+                    <h3 class="text-xl font-bold mb-3">✨ ความสามารถเด่นของ SML Account</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <h4 class="font-semibold mb-2">🚀 ง่ายต่อการใช้งาน</h4>
+                            <ul class="text-blue-100 space-y-1 text-sm">
+                                <li>• อินเตอร์เฟซภาษาไทย เข้าใจง่าย</li>
+                                <li>• บันทึกรายการแบบง่าย</li>
+                                <li>• ระบบช่วยจำรหัสบัญชี</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold mb-2">📊 รายงานครบถ้วน</h4>
+                            <ul class="text-blue-100 space-y-1 text-sm">
+                                <li>• งบกำไรขาดทุน</li>
+                                <li>• งบดุล</li>
+                                <li>• รายงานภาษีมูลค่าเพิ่ม</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Tips -->
+            <section>
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">เทคนิคการทำบัญชีที่ดี</h2>
+                <div class="space-y-3">
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <h3 class="font-semibold text-gray-900 mb-2">📝 บันทึกทันที</h3>
+                        <p class="text-gray-700">อย่าปล่อยให้ใบกำกับภาษี ใบเสร็จ หรือเอกสารการเงินสะสม</p>
+                    </div>
+                    
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <h3 class="font-semibold text-gray-900 mb-2">🗂️ จัดเก็บเอกสาร</h3>
+                        <p class="text-gray-700">จัดเก็บเอกสารอย่างเป็นระบบ แยกตามประเภทและวันที่</p>
+                    </div>
+                    
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <h3 class="font-semibold text-gray-900 mb-2">🔍 ตรวจสอบสม่ำเสมอ</h3>
+                        <p class="text-gray-700">ตรวจสอบงบการเงินและยอดคงเหลือเป็นประจำ</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CTA -->
+            <section class="text-center">
+                <div class="bg-gradient-to-r from-green-600 to-blue-600 rounded-xl p-6 text-white">
+                    <h2 class="text-2xl font-bold mb-3">🎯 พร้อมเริ่มทำบัญชีแล้วใช่มั้ย?</h2>
+                    <p class="text-lg mb-4">
+                        ลองใช้ SML Account ฟรี 30 วัน พร้อมอบรมการใช้งานโดยผู้เชี่ยวชาญ
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <a href="/contact" class="bg-white text-green-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                            ติดต่อเรา
+                        </a>
+                        <a href="/products/sml-account" class="bg-transparent border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors">
+                            ดูผลิตภัณฑ์
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</article>
+
+</Layout>

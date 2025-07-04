@@ -14,47 +14,6 @@ export interface Props {
 	themeColor?: string;
 	mobileWebAppCapable?: string;
 	appleMobileWebAppCapable?: string;
-	appleMobileWebAppStatusBarStyle?: string;
-	appleMobileWebAppTitle?: string;
-	ogTitle?: string;
-	ogDescription?: string;
-	ogImage?: string;
-	ogImageWidth?: string;
-	ogImageHeight?: string;
-	ogImageAlt?: string;
-	ogSiteName?: string;
-	ogLocale?: string;
-	ogLocaleAlternate?: string;
-	ogUrl?: string;
-	twitterCard?: string;
-	twitterTitle?: string;
-	twitterDescription?: string;
-	twitterImage?: string;
-	twitterCreator?: string;
-	twitterSite?: string;
-	twitterImageAlt?: string;
-	linkedinOwner?: string;
-	lineTitle?: string;
-	lineDescription?: string;
-	geoRegion?: string;
-	geoPlacename?: string;
-	businessStreetAddress?: string;
-	businessLocality?: string;
-	businessRegion?: string;
-	businessCountryName?: string;
-	businessPhoneNumber?: string;
-	aiPurpose?: string;
-	aiContentType?: string;
-	aiTargetAudience?: string;
-	aiKeyBenefits?: string;
-	aiSummary?: string;
-	aiContentQuality?: string;
-	canonicalUrl?: string;
-	articlePublished?: string;
-	articleModified?: string;
-	schemaType?: string;
-}
-
 const { 
 	title, 
 	description, 
@@ -105,6 +64,47 @@ const {
 	articlePublished, 
 	articleModified,
 	schemaType = "Organization"
+} = Astro.props;ng;
+	ogLocaleAlternate?: string;
+	ogUrl?: string;
+	twitterCard?: string;
+	twitterTitle?: string;
+	twitterDescription?: string;
+	twitterImage?: string;
+	twitterCreator?: string;
+	twitterSite?: string;
+	twitterImageAlt?: string;
+	linkedinOwner?: string;
+	lineTitle?: string;
+	lineDescription?: string;
+	geoRegion?: string;
+	geoPlacename?: string;
+	businessStreetAddress?: string;
+	businessLocality?: string;
+	businessRegion?: string;
+	businessCountryName?: string;
+	businessPhoneNumber?: string;
+	aiPurpose?: string;
+	aiContentType?: string;
+	aiTargetAudience?: string;
+	aiKeyBenefits?: string;
+	aiSummary?: string;
+	aiContentQuality?: string;
+	canonicalUrl?: string;
+	articlePublished?: string;
+	articleModified?: string;
+	schemaType?: string;
+}
+
+const { 
+	title, 
+	description, 
+	keywords, 
+	ogImage, 
+	canonicalUrl, 
+	articlePublished, 
+	articleModified,
+	schemaType = "Organization"
 } = Astro.props;
 
 const defaultDescription = "SML Soft - โปรแกรมบัญชี POS ERP ระบบ AI ครบวงจร สำหรับ SMEs ไทย | Digital Transformation | AI Solutions | Cloud Computing";
@@ -131,17 +131,21 @@ const structuredData = {
 		"telephone": "+66814345533",
 		"contactType": "customer service",
 		"areaServed": "TH",
-		"availableLanguage": "th"
+		"availableLanguage": "Thai"
 	},
 	"address": {
 		"@type": "PostalAddress",
 		"addressCountry": "TH",
-		"addressRegion": "Bangkok"
+		"addressLocality": "Bangkok"
+	},
+	"offers": {
+		"@type": "Offer",
+		"name": "โปรแกรมบัญชี POS ERP AI Solutions",
+		"description": "ระบบจัดการธุรกิจครบวงจร พร้อม AI Technology"
 	}
 };
 
-// Add article-specific structured data
-if (schemaType === "Article") {
+if (schemaType === "Article" && articlePublished) {
 	structuredData["@type"] = "Article";
 	structuredData.headline = title;
 	structuredData.datePublished = articlePublished;
@@ -237,24 +241,60 @@ if (schemaType === "Article") {
 		{lineTitle && <meta property="line:title" content={lineTitle} />}
 		{lineDescription && <meta property="line:description" content={lineDescription} />}
 		
+		<!-- Additional Business Meta -->
+		<meta name="geo.region" content="TH" />
+		<meta name="geo.placename" content="Bangkok" />
+		<meta name="business.contact_data.street_address" content="Bangkok, Thailand" />
+		<meta name="business.contact_data.locality" content="Bangkok" />
+		<meta name="business.contact_data.region" content="TH" />
+		<meta name="business.contact_data.country_name" content="Thailand" />
+		<meta name="business.contact_data.phone_number" content="+66814345533" />
+		
+		<!-- Preconnect to External Resources -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link rel="preconnect" href="https://www.googletagmanager.com" />
+		
+		<!-- DNS Prefetch -->
+		<link rel="dns-prefetch" href="//fonts.googleapis.com" />
+		<link rel="dns-prefetch" href="//www.google-analytics.com" />
+		
+		<!-- Fonts -->
+		<link
+			href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;600;700&display=swap"
+			rel="stylesheet"
+		/>
+		
 		<!-- Structured Data -->
 		<script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
 		
-		<!-- Google Analytics (Optional) -->
-		<!-- Add GA4 tracking code here if needed -->
-		
-		<!-- Performance Hints -->
-		<link rel="dns-prefetch" href="//fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		
-		<!-- Additional Meta Tags -->
-		<meta name="format-detection" content="telephone=no" />
-		<meta name="msapplication-TileColor" content={themeColor || "#3B82F6"} />
+		<!-- Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-KVZRB8RF05"></script>
+		<script is:inline>
+			window.dataLayer = window.dataLayer || [];
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag("js", new Date());
+			gtag("config", "G-KVZRB8RF05", {
+				page_title: document.title,
+				page_location: window.location.href
+			});
+		</script>
+
+		<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=AW-1054730371"></script>
+		<script is:inline>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+
+			gtag('config', 'AW-1054730371');
+		</script>
 	</head>
-	
-	<body class="min-h-screen bg-gray-50">
+	<body class="font-thai bg-gray-50 overflow-x-hidden">
 		<Header />
-		<main>
+		<main class="min-h-screen w-full">
 			<slot />
 		</main>
 		<Footer />

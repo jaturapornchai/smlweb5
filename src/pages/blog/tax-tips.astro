@@ -1,0 +1,344 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+
+const breadcrumbItems = [
+    { name: 'หน้าหลัก', url: '/' },
+    { name: 'บทความ', url: '/blog' },
+    { name: 'เทคนิคการคำนวณภาษี', url: '/blog/tax-tips' }
+];
+---
+
+<Layout 
+    title="เทคนิคการคำนวณภาษี - คำนวณภาษีอย่างถูกต้องและประหยัด | SML Soft"
+    description="เรียนรู้เทคนิคการคำนวณภาษี ภาษีมูลค่าเพิ่ม ภาษีเงินได้นิติบุคคล วิธีประหยัดภาษีอย่างถูกกฎหมาย"
+    keywords="การคำนวณภาษี, ภาษีมูลค่าเพิ่ม, ภาษีเงินได้นิติบุคคล, ประหยัดภาษี, การยื่นภาษี"
+>
+
+<Breadcrumb items={breadcrumbItems} />
+
+<article class="py-12 bg-gray-50">
+    <div class="container mx-auto px-4 max-w-4xl">
+        <!-- Header -->
+        <header class="text-center mb-12">
+            <h1 class="text-4xl font-bold text-gray-900 mb-4">
+                💰 เทคนิคการคำนวณภาษี
+            </h1>
+            <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                คำนวณภาษีอย่างถูกต้อง ประหยัดภาษีอย่างถูกกฎหมาย และไม่พลาดกำหนดยื่น
+            </p>
+            <div class="flex items-center justify-center space-x-6 mt-6 text-sm text-gray-500">
+                <span>📅 4 กรกฎาคม 2025</span>
+                <span>⏱️ อ่าน 10 นาที</span>
+                <span>👤 ทีมงาน SML Soft</span>
+            </div>
+        </header>
+
+        <!-- Content -->
+        <div class="bg-white rounded-2xl shadow-lg p-8 space-y-8">
+            
+            <!-- Introduction -->
+            <section>
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">ภาษีที่ธุรกิจต้องเสีย</h2>
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    ธุรกิจในประเทศไทยต้องเสียภาษีหลายประเภท การคำนวณที่ถูกต้องจะช่วยให้ธุรกิจ
+                    ไม่เสียภาษีเกินจำเป็น และไม่มีปัญหากับกรมสรรพากร
+                </p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div class="bg-blue-50 p-4 rounded-lg text-center">
+                        <h3 class="font-semibold text-blue-900 mb-2">ภาษีมูลค่าเพิ่ม</h3>
+                        <div class="text-2xl font-bold text-blue-600">7%</div>
+                        <p class="text-blue-700 text-sm">ยื่นทุกเดือน</p>
+                    </div>
+                    <div class="bg-green-50 p-4 rounded-lg text-center">
+                        <h3 class="font-semibold text-green-900 mb-2">ภาษีเงินได้นิติบุคคล</h3>
+                        <div class="text-2xl font-bold text-green-600">20%</div>
+                        <p class="text-green-700 text-sm">ยื่นปีละครั้ง</p>
+                    </div>
+                    <div class="bg-orange-50 p-4 rounded-lg text-center">
+                        <h3 class="font-semibold text-orange-900 mb-2">ภาษีหัก ณ ที่จ่าย</h3>
+                        <div class="text-2xl font-bold text-orange-600">1-5%</div>
+                        <p class="text-orange-700 text-sm">ยื่นทุกเดือน</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- VAT Calculation -->
+            <section>
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">การคำนวณภาษีมูลค่าเพิ่ม (VAT)</h2>
+                
+                <div class="bg-yellow-50 p-6 rounded-lg mb-6">
+                    <h3 class="text-lg font-semibold text-yellow-900 mb-3">📋 สูตรการคำนวณ</h3>
+                    <div class="bg-yellow-100 p-4 rounded text-center mb-4">
+                        <strong class="text-yellow-900">ภาษีมูลค่าเพิ่มที่ต้องชำระ = ภาษีขาย - ภาษีซื้อ</strong>
+                    </div>
+                    <ul class="text-yellow-800 space-y-1">
+                        <li>• <strong>ภาษีขาย:</strong> 7% ของมูลค่าสินค้า/บริการที่ขาย</li>
+                        <li>• <strong>ภาษีซื้อ:</strong> 7% ของค่าใช้จ่ายที่เกี่ยวข้องกับธุรกิจ</li>
+                    </ul>
+                </div>
+
+                <div class="space-y-4">
+                    <div class="bg-gray-50 p-6 rounded-lg">
+                        <h4 class="font-semibold text-gray-900 mb-3">✅ ภาษีซื้อที่นำมาหักได้</h4>
+                        <ul class="text-gray-700 space-y-1">
+                            <li>• ค่าวัตถุดิบสำหรับผลิตสินค้า</li>
+                            <li>• ค่าใช้จ่ายในการดำเนินธุรกิจ (เช่น เครื่องใช้สำนักงาน)</li>
+                            <li>• ค่าบริการที่เกี่ยวข้องกับธุรกิจ</li>
+                            <li>• ค่าเครื่องจักรและอุปกรณ์</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-gray-50 p-6 rounded-lg">
+                        <h4 class="font-semibold text-gray-900 mb-3">❌ ภาษีซื้อที่นำมาหักไม่ได้</h4>
+                        <ul class="text-gray-700 space-y-1">
+                            <li>• ค่าใช้จ่ายส่วนตัวของเจ้าของ</li>
+                            <li>• ค่าอาหารและเครื่องดื่ม (ยกเว้นธุรกิจร้านอาหาร)</li>
+                            <li>• ค่าบันเทิงและของขวัญ</li>
+                            <li>• ค่าซ่อมรถยนต์ส่วนบุคคล</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="bg-blue-50 p-6 rounded-lg mt-6">
+                    <h4 class="font-semibold text-blue-900 mb-3">📊 ตัวอย่างการคำนวณ</h4>
+                    <div class="bg-white p-4 rounded">
+                        <p class="text-blue-800 mb-2"><strong>บริษัท ABC มีข้อมูลเดือนมกราคม:</strong></p>
+                        <ul class="text-blue-700 space-y-1 mb-3">
+                            <li>• ขายสินค้า 1,000,000 บาท (+ VAT 70,000 บาท)</li>
+                            <li>• ซื้อวัตถุดิบ 600,000 บาท (+ VAT 42,000 บาท)</li>
+                            <li>• ค่าใช้จ่ายอื่น 100,000 บาท (+ VAT 7,000 บาท)</li>
+                        </ul>
+                        <div class="bg-blue-100 p-3 rounded">
+                            <p class="text-blue-900 font-semibold">
+                                VAT ที่ต้องชำระ = 70,000 - (42,000 + 7,000) = 21,000 บาท
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Corporate Tax -->
+            <section>
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">ภาษีเงินได้นิติบุคคล</h2>
+                
+                <div class="bg-green-50 p-6 rounded-lg mb-6">
+                    <h3 class="text-lg font-semibold text-green-900 mb-3">💡 อัตราภาษีเงินได้นิติบุคคล</h3>
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-center bg-white p-3 rounded">
+                            <span class="text-green-800">SME (ยอดขายไม่เกิน 50 ล้านบาท)</span>
+                            <span class="font-bold text-green-600">10%</span>
+                        </div>
+                        <div class="flex justify-between items-center bg-white p-3 rounded">
+                            <span class="text-green-800">บริษัททั่วไป</span>
+                            <span class="font-bold text-green-600">20%</span>
+                        </div>
+                        <div class="flex justify-between items-center bg-white p-3 rounded">
+                            <span class="text-green-800">บริษัทจดทะเบียนในตลาดหลักทรัพย์</span>
+                            <span class="font-bold text-green-600">20%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="space-y-4">
+                    <div class="bg-gray-50 p-6 rounded-lg">
+                        <h4 class="font-semibold text-gray-900 mb-3">📈 รายได้ที่ต้องเสียภาษี</h4>
+                        <ul class="text-gray-700 space-y-1">
+                            <li>• รายได้จากการขายสินค้า</li>
+                            <li>• รายได้จากการให้บริการ</li>
+                            <li>• รายได้จากการลงทุน (ดอกเบิ้ย, เงินปันผล)</li>
+                            <li>• รายได้อื่น ๆ ที่เกี่ยวข้องกับธุรกิจ</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-gray-50 p-6 rounded-lg">
+                        <h4 class="font-semibold text-gray-900 mb-3">📉 ค่าใช้จ่ายที่หักได้</h4>
+                        <ul class="text-gray-700 space-y-1">
+                            <li>• ต้นทุนขาย (วัตถุดิบ, ค่าแรง)</li>
+                            <li>• ค่าใช้จ่ายในการดำเนินงาน</li>
+                            <li>• ค่าเสื่อมราคาของสินทรัพย์</li>
+                            <li>• ค่าใช้จ่ายที่จำเป็นและสมเหตุสมผล</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Withholding Tax -->
+            <section>
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">ภาษีหัก ณ ที่จ่าย</h2>
+                
+                <div class="overflow-x-auto">
+                    <table class="w-full bg-white rounded-lg shadow">
+                        <thead class="bg-gray-100">
+                            <tr>
+                                <th class="px-4 py-3 text-left text-gray-900">ประเภทรายจ่าย</th>
+                                <th class="px-4 py-3 text-center text-gray-900">อัตราภาษี</th>
+                                <th class="px-4 py-3 text-center text-gray-900">เงื่อนไข</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-gray-700">
+                            <tr class="border-t">
+                                <td class="px-4 py-3">ค่าบริการที่ปรึกษา</td>
+                                <td class="px-4 py-3 text-center font-semibold">5%</td>
+                                <td class="px-4 py-3 text-center">เกิน 1,000 บาท</td>
+                            </tr>
+                            <tr class="border-t bg-gray-50">
+                                <td class="px-4 py-3">ค่าบริการรับเหมา</td>
+                                <td class="px-4 py-3 text-center font-semibold">3%</td>
+                                <td class="px-4 py-3 text-center">เกิน 1,000 บาท</td>
+                            </tr>
+                            <tr class="border-t">
+                                <td class="px-4 py-3">ค่าเช่าอสังหาริมทรัพย์</td>
+                                <td class="px-4 py-3 text-center font-semibold">5%</td>
+                                <td class="px-4 py-3 text-center">ทุกกรณี</td>
+                            </tr>
+                            <tr class="border-t bg-gray-50">
+                                <td class="px-4 py-3">ค่าขนส่ง</td>
+                                <td class="px-4 py-3 text-center font-semibold">1%</td>
+                                <td class="px-4 py-3 text-center">เกิน 1,000 บาท</td>
+                            </tr>
+                            <tr class="border-t">
+                                <td class="px-4 py-3">ค่าโฆษณา</td>
+                                <td class="px-4 py-3 text-center font-semibold">2%</td>
+                                <td class="px-4 py-3 text-center">เกิน 1,000 บาท</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Tax Saving Tips -->
+            <section>
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">เทคนิคประหยัดภาษีอย่างถูกกฎหมาย</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-blue-50 p-6 rounded-lg">
+                        <h3 class="text-lg font-semibold text-blue-900 mb-3">💡 เทคนิคลดภาษี</h3>
+                        <ul class="text-blue-800 space-y-2 text-sm">
+                            <li>• เก็บใบกำกับภาษีครบถ้วน</li>
+                            <li>• แยกค่าใช้จ่ายส่วนตัวและธุรกิจ</li>
+                            <li>• ใช้สิทธิค่าเสื่อมราคา</li>
+                            <li>• ลงทุนในอุปกรณ์ที่จำเป็น</li>
+                            <li>• จ่ายโบนัสในช่วงปลายปี</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-green-50 p-6 rounded-lg">
+                        <h3 class="text-lg font-semibold text-green-900 mb-3">📋 การจัดเก็บเอกสาร</h3>
+                        <ul class="text-green-800 space-y-2 text-sm">
+                            <li>• จัดเก็บใบกำกับภาษี 5 ปี</li>
+                            <li>• แยกประเภทตามเดือน</li>
+                            <li>• Scan เก็บไฟล์สำรอง</li>
+                            <li>• ทำสำเนาเอกสารสำคัญ</li>
+                            <li>• ตรวจสอบความถูกต้อง</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="bg-red-50 p-6 rounded-lg mt-6">
+                    <h3 class="text-lg font-semibold text-red-900 mb-3">⚠️ สิ่งที่ต้องระวัง</h3>
+                    <ul class="text-red-800 space-y-1">
+                        <li>• ไม่ควรหักภาษีซื้อที่ไม่เกี่ยวข้องกับธุรกิจ</li>
+                        <li>• ไม่ควรปลอมแปลงใบกำกับภาษี</li>
+                        <li>• ไม่ควรแยกใบกำกับภาษีเพื่อหลีกเลี่ยงภาษี</li>
+                        <li>• ระวังกำหนดเวลายื่นภาษี</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Tax Calendar -->
+            <section>
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">ปฏิทินภาษี 2025</h2>
+                
+                <div class="bg-purple-50 p-6 rounded-lg">
+                    <h3 class="text-lg font-semibold text-purple-900 mb-4">📅 กำหนดการยื่นภาษี</h3>
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-center bg-white p-3 rounded">
+                            <span class="text-purple-800">ภาษีมูลค่าเพิ่ม</span>
+                            <span class="font-semibold text-purple-600">วันที่ 15 ของเดือนถัดไป</span>
+                        </div>
+                        <div class="flex justify-between items-center bg-white p-3 rounded">
+                            <span class="text-purple-800">ภาษีหัก ณ ที่จ่าย</span>
+                            <span class="font-semibold text-purple-600">วันที่ 7 ของเดือนถัดไป</span>
+                        </div>
+                        <div class="flex justify-between items-center bg-white p-3 rounded">
+                            <span class="text-purple-800">ภาษีเงินได้นิติบุคคล</span>
+                            <span class="font-semibold text-purple-600">ภายใน 150 วันหลังสิ้นปีบัญชี</span>
+                        </div>
+                        <div class="flex justify-between items-center bg-white p-3 rounded">
+                            <span class="text-purple-800">ภาษีเงินได้ครึ่งปี</span>
+                            <span class="font-semibold text-purple-600">ภายใน 2 เดือนหลังครึ่งปีแรก</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SML Account Benefits -->
+            <section>
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">SML Account ช่วยคำนวณภาษีได้อย่างไร?</h2>
+                <div class="bg-gradient-to-r from-green-600 to-blue-600 rounded-xl p-8 text-white">
+                    <h3 class="text-xl font-bold mb-4">⚡ ฟีเจอร์ด้านภาษี</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <h4 class="font-semibold mb-2">🧮 คำนวณอัตโนมัติ</h4>
+                            <ul class="text-green-100 text-sm space-y-1">
+                                <li>• คำนวณ VAT ขาย-ซื้อ</li>
+                                <li>• คำนวณภาษีหัก ณ ที่จ่าย</li>
+                                <li>• คำนวณภาษีเงินได้นิติบุคคล</li>
+                                <li>• แจ้งเตือนกำหนดยื่น</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold mb-2">📊 รายงานภาษี</h4>
+                            <ul class="text-green-100 text-sm space-y-1">
+                                <li>• รายงาน VAT พร้อมยื่น</li>
+                                <li>• รายงานภาษีหัก ณ ที่จ่าย</li>
+                                <li>• รายงานกำไร-ขาดทุน</li>
+                                <li>• ส่งออกไฟล์ e-Filing</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold mb-2">📁 จัดการเอกสาร</h4>
+                            <ul class="text-green-100 text-sm space-y-1">
+                                <li>• บันทึกใบกำกับภาษี</li>
+                                <li>• ตรวจสอบความถูกต้อง</li>
+                                <li>• แยกประเภทอัตโนมัติ</li>
+                                <li>• ค้นหาเอกสารได้รวดเร็ว</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold mb-2">🔔 แจ้งเตือน</h4>
+                            <ul class="text-green-100 text-sm space-y-1">
+                                <li>• กำหนดยื่นภาษี</li>
+                                <li>• การเปลี่ยนแปลงกฎหมาย</li>
+                                <li>• การตรวจสอบจากกรมสรรพากร</li>
+                                <li>• อัปเดตอัตราภาษี</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CTA -->
+            <section class="text-center">
+                <div class="bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl p-8 text-white">
+                    <h2 class="text-2xl font-bold mb-4">💼 พร้อมจัดการภาษีอย่างมืออาชีพแล้วใช่มั้ย?</h2>
+                    <p class="text-lg mb-6">
+                        ลองใช้ SML Account ฟรี 30 วัน ระบบคำนวณภาษีอัตโนมัติ พร้อมคำปรึกษาจากผู้เชี่ยวชาญ
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <a href="/contact" class="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                            ปรึกษาฟรี
+                        </a>
+                        <a href="/products/sml-account" class="bg-transparent border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
+                            ทดลองใช้ฟรี
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</article>
+
+</Layout>
