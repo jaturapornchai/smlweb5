@@ -55,10 +55,9 @@ export interface Props {
 	schemaType?: string;
 }
 
-<<<<<<< HEAD
-const { 
-	title, 
-	description, 
+const {
+	title,
+	description,
 	keywords,
 	author,
 	language = "th-TH",
@@ -102,17 +101,8 @@ const {
 	aiKeyBenefits,
 	aiSummary,
 	aiContentQuality,
-	canonicalUrl, 
-	articlePublished, 
-=======
-const {
-	title,
-	description,
-	keywords,
-	ogImage,
 	canonicalUrl,
 	articlePublished,
->>>>>>> 8e93687e72aaf83383e06452a08ebdec5e9a588a
 	articleModified,
 	schemaType = "Organization",
 } = Astro.props;
@@ -145,20 +135,6 @@ const structuredData: any = {
 		"https://line.me/R/ti/p/@smlsoft",
 		"https://www.youtube.com/@smlsoftyoutube1545",
 	],
-<<<<<<< HEAD
-	"contactPoint": {
-		"@type": "ContactPoint",
-		"telephone": "+66814345533",
-		"contactType": "customer service",
-		"areaServed": "TH",
-		"availableLanguage": "th"
-	},
-	"address": {
-		"@type": "PostalAddress",
-		"addressCountry": "TH",
-		"addressRegion": "Bangkok"
-	}
-=======
 	address: [
 		{
 			"@type": "PostalAddress",
@@ -244,7 +220,6 @@ const structuredData: any = {
 		"SME Solutions",
 		"Thai Business Software",
 	],
->>>>>>> 8e93687e72aaf83383e06452a08ebdec5e9a588a
 };
 
 // Add article-specific structured data
@@ -275,30 +250,12 @@ if (schemaType === "Article") {
 		<meta name="googlebot" content="index, follow" />
 
 		<!-- Canonical URL -->
-<<<<<<< HEAD
-		<link rel="canonical" href={ogUrl || currentUrl} />
-		
-		<!-- Favicon and Icons -->
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="apple-touch-icon" href="/favicon.svg" />
-		
-		<!-- PWA Meta Tags -->
-		{themeColor && <meta name="theme-color" content={themeColor} />}
-		{mobileWebAppCapable && <meta name="mobile-web-app-capable" content={mobileWebAppCapable} />}
-		{appleMobileWebAppCapable && <meta name="apple-mobile-web-app-capable" content={appleMobileWebAppCapable} />}
-		{appleMobileWebAppStatusBarStyle && <meta name="apple-mobile-web-app-status-bar-style" content={appleMobileWebAppStatusBarStyle} />}
-		{appleMobileWebAppTitle && <meta name="apple-mobile-web-app-title" content={appleMobileWebAppTitle} />}
-		{applicationName && <meta name="application-name" content={applicationName} />}
-		
-=======
 		<link rel="canonical" href={currentUrl} />
 
 		<!-- Favicon and Icons -->
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="apple-touch-icon" href="/favicon.svg" />
 		<link rel="manifest" href="/manifest.json" />
-
->>>>>>> 8e93687e72aaf83383e06452a08ebdec5e9a588a
 		<!-- Generator -->
 		<meta name="generator" content={Astro.generator} />
 
@@ -307,11 +264,13 @@ if (schemaType === "Article") {
 		<meta name="title" content={fullTitle} />
 		<meta name="description" content={description || defaultDescription} />
 		<meta name="keywords" content={keywords || defaultKeywords} />
-<<<<<<< HEAD
-		<meta name="author" content={author || "SML Soft - บริษัท เอสเอ็มแอล ซอฟต์ จำกัด"} />
+		<meta
+			name="author"
+			content={author || "SML Soft - บริษัท เอสเอ็มแอล ซอฟต์ จำกัด"}
+		/>
 		<meta name="language" content={language || "Thai"} />
 		<meta name="revisit-after" content={revisitAfter || "7 days"} />
-		
+
 		<!-- AI-specific Meta Tags -->
 		{aiPurpose && <meta name="ai:purpose" content={aiPurpose} />}
 		{aiContentType && <meta name="ai:content-type" content={aiContentType} />}
@@ -319,156 +278,74 @@ if (schemaType === "Article") {
 		{aiKeyBenefits && <meta name="ai:key-benefits" content={aiKeyBenefits} />}
 		{aiSummary && <meta name="ai:summary" content={aiSummary} />}
 		{aiContentQuality && <meta name="ai:content-quality" content={aiContentQuality} />}
-		
-		<!-- Geographic Meta Tags -->
-		{geoRegion && <meta name="geo.region" content={geoRegion} />}
-		{geoPlacename && <meta name="geo.placename" content={geoPlacename} />}
-		
-		<!-- Business Meta Tags -->
-		{businessStreetAddress && <meta name="business:contact_data:street_address" content={businessStreetAddress} />}
-		{businessLocality && <meta name="business:contact_data:locality" content={businessLocality} />}
-		{businessRegion && <meta name="business:contact_data:region" content={businessRegion} />}
-		{businessCountryName && <meta name="business:contact_data:country_name" content={businessCountryName} />}
-		{businessPhoneNumber && <meta name="business:contact_data:phone_number" content={businessPhoneNumber} />}
-		
-		<!-- Open Graph / Facebook -->
-		<meta property="og:type" content={schemaType === "Article" ? "article" : "website"} />
-		<meta property="og:url" content={ogUrl || currentUrl} />
-		<meta property="og:title" content={ogTitle || fullTitle} />
-		<meta property="og:description" content={ogDescription || description || defaultDescription} />
-		<meta property="og:image" content={ogImage || `${siteUrl}/favicon.svg`} />
-		{ogImageWidth && <meta property="og:image:width" content={ogImageWidth} />}
-		{ogImageHeight && <meta property="og:image:height" content={ogImageHeight} />}
-		{ogImageAlt && <meta property="og:image:alt" content={ogImageAlt} />}
-		<meta property="og:site_name" content={ogSiteName || "SML Soft"} />
-		<meta property="og:locale" content={ogLocale || "th_TH"} />
-		{ogLocaleAlternate && <meta property="og:locale:alternate" content={ogLocaleAlternate} />}
-		
-		<!-- Twitter -->
-		<meta property="twitter:card" content={twitterCard || "summary_large_image"} />
-		<meta property="twitter:url" content={ogUrl || currentUrl} />
-		<meta property="twitter:title" content={twitterTitle || fullTitle} />
-		<meta property="twitter:description" content={twitterDescription || description || defaultDescription} />
-		<meta property="twitter:image" content={twitterImage || ogImage || `${siteUrl}/favicon.svg`} />
-		{twitterImageAlt && <meta property="twitter:image:alt" content={twitterImageAlt} />}
-		{twitterCreator && <meta property="twitter:creator" content={twitterCreator} />}
-		{twitterSite && <meta property="twitter:site" content={twitterSite} />}
-		
-		<!-- LinkedIn -->
-		{linkedinOwner && <meta property="linkedin:owner" content={linkedinOwner} />}
-		
-		<!-- LINE -->
-		{lineTitle && <meta property="line:title" content={lineTitle} />}
-		{lineDescription && <meta property="line:description" content={lineDescription} />}
-		
-		<!-- Structured Data -->
-		<script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
-		
-		<!-- Google Analytics (Optional) -->
-		<!-- Add GA4 tracking code here if needed -->
-		
-		<!-- Performance Hints -->
-		<link rel="dns-prefetch" href="//fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		
-		<!-- Additional Meta Tags -->
-		<meta name="format-detection" content="telephone=no" />
-		<meta name="msapplication-TileColor" content={themeColor || "#3B82F6"} />
-=======
-		<meta
-			name="author"
-			content="SML Soft - บริษัท เอสเอ็มแอล ซอฟต์ จำกัด"
-		/>
-		<meta name="language" content="Thai" />
-		<meta name="revisit-after" content="7 days" />
-
-		<!-- AI-friendly meta tags -->
-		<meta
-			name="ai-purpose"
-			content="SML Soft provides AI-powered business software solutions including accounting systems, POS systems, ERP and B2B marketplace solutions for SMEs in Thailand"
-		/>
-		<meta
-			name="ai-content-type"
-			content="business-software, AI-solutions, accounting-software, POS-systems, ERP-systems, B2B-marketplace"
-		/>
-		<meta
-			name="ai-target-audience"
-			content="Thai SMEs, accounting professionals, retail businesses, manufacturers, business owners"
-		/>
-		<meta
-			name="ai-key-benefits"
-			content="increase-efficiency, reduce-costs, automate-business-processes, AI-powered-analytics, cloud-based-solutions"
-		/>
 
 		<!-- Enhanced SEO Meta Tags -->
-		<meta name="application-name" content="SML Soft" />
-		<meta name="theme-color" content="#3B82F6" />
-		<meta name="msapplication-TileColor" content="#3B82F6" />
+		<meta name="application-name" content={applicationName || "SML Soft"} />
+		<meta name="theme-color" content={themeColor || "#3B82F6"} />
+		<meta name="msapplication-TileColor" content={themeColor || "#3B82F6"} />
 		<meta name="format-detection" content="telephone=yes" />
-		<meta name="mobile-web-app-capable" content="yes" />
-		<meta name="apple-mobile-web-app-capable" content="yes" />
-		<meta name="apple-mobile-web-app-status-bar-style" content="default" />
-		<meta name="apple-mobile-web-app-title" content="SML Soft" />
+		<meta name="mobile-web-app-capable" content={mobileWebAppCapable || "yes"} />
+		<meta name="apple-mobile-web-app-capable" content={appleMobileWebAppCapable || "yes"} />
+		<meta name="apple-mobile-web-app-status-bar-style" content={appleMobileWebAppStatusBarStyle || "default"} />
+		<meta name="apple-mobile-web-app-title" content={appleMobileWebAppTitle || "SML Soft"} />
+
+		<!-- Geographic Meta Tags -->
+		<meta name="geo.region" content={geoRegion || "TH"} />
+		<meta name="geo.placename" content={geoPlacename || "Bangkok"} />
+
+		<!-- Business Meta Tags -->
+		<meta name="business.contact_data.street_address" content={businessStreetAddress || "Bangkok, Thailand"} />
+		<meta name="business.contact_data.locality" content={businessLocality || "Bangkok"} />
+		<meta name="business.contact_data.region" content={businessRegion || "TH"} />
+		<meta name="business.contact_data.country_name" content={businessCountryName || "Thailand"} />
+		<meta name="business.contact_data.phone_number" content={businessPhoneNumber || "+66814345533"} />
 
 		<!-- Open Graph / Facebook -->
 		<meta
 			property="og:type"
 			content={schemaType === "Article" ? "article" : "website"}
 		/>
-		<meta property="og:url" content={currentUrl} />
-		<meta property="og:title" content={fullTitle} />
+		<meta property="og:url" content={ogUrl || currentUrl} />
+		<meta property="og:title" content={ogTitle || fullTitle} />
 		<meta
 			property="og:description"
-			content={description || defaultDescription}
+			content={ogDescription || description || defaultDescription}
 		/>
 		<meta
 			property="og:image"
 			content={ogImage || `${siteUrl}/favicon.svg`}
 		/>
-		<meta property="og:image:width" content="1200" />
-		<meta property="og:image:height" content="630" />
-		<meta property="og:site_name" content="SML Soft" />
-		<meta property="og:locale" content="th_TH" />
-		<meta property="og:locale:alternate" content="en_US" />
+		<meta property="og:image:width" content={ogImageWidth || "1200"} />
+		<meta property="og:image:height" content={ogImageHeight || "630"} />
+		{ogImageAlt && <meta property="og:image:alt" content={ogImageAlt} />}
+		<meta property="og:site_name" content={ogSiteName || "SML Soft"} />
+		<meta property="og:locale" content={ogLocale || "th_TH"} />
+		<meta property="og:locale:alternate" content={ogLocaleAlternate || "en_US"} />
 
 		<!-- Twitter -->
-		<meta property="twitter:card" content="summary_large_image" />
-		<meta property="twitter:url" content={currentUrl} />
-		<meta property="twitter:title" content={fullTitle} />
+		<meta property="twitter:card" content={twitterCard || "summary_large_image"} />
+		<meta property="twitter:url" content={ogUrl || currentUrl} />
+		<meta property="twitter:title" content={twitterTitle || fullTitle} />
 		<meta
 			property="twitter:description"
-			content={description || defaultDescription}
+			content={twitterDescription || description || defaultDescription}
 		/>
 		<meta
 			property="twitter:image"
-			content={ogImage || `${siteUrl}/favicon.svg`}
+			content={twitterImage || ogImage || `${siteUrl}/favicon.svg`}
 		/>
-		<meta property="twitter:creator" content="@smlsoft" />
-		<meta property="twitter:site" content="@smlsoft" />
+		{twitterImageAlt && <meta property="twitter:image:alt" content={twitterImageAlt} />}
+		<meta property="twitter:creator" content={twitterCreator || "@smlsoft"} />
+		<meta property="twitter:site" content={twitterSite || "@smlsoft"} />
 
 		<!-- LinkedIn -->
-		<meta property="linkedin:owner" content="SML Soft" />
+		<meta property="linkedin:owner" content={linkedinOwner || "SML Soft"} />
 
 		<!-- Line -->
-		<meta property="line:title" content={fullTitle} />
+		<meta property="line:title" content={lineTitle || fullTitle} />
 		<meta
 			property="line:description"
-			content={description || defaultDescription}
-		/>
-
-		<!-- Additional Business Meta -->
-		<meta name="geo.region" content="TH" />
-		<meta name="geo.placename" content="Bangkok" />
-		<meta
-			name="business.contact_data.street_address"
-			content="Bangkok, Thailand"
-		/>
-		<meta name="business.contact_data.locality" content="Bangkok" />
-		<meta name="business.contact_data.region" content="TH" />
-		<meta name="business.contact_data.country_name" content="Thailand" />
-		<meta
-			name="business.contact_data.phone_number"
-			content="+66814345533"
+			content={lineDescription || description || defaultDescription}
 		/>
 
 		<!-- Preconnect to External Resources -->
@@ -523,7 +400,6 @@ if (schemaType === "Article") {
 
 			gtag("config", "AW-1054730371");
 		</script>
->>>>>>> 8e93687e72aaf83383e06452a08ebdec5e9a588a
 	</head>
 	
 	<body class="min-h-screen bg-gray-50">
