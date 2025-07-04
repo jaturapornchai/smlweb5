@@ -1,0 +1,21 @@
+/* TEAM */
+Developer: SML Soft Development Team
+Contact: info@smlsoft.com
+Twitter: @smlsoft
+From: Bangkok, Thailand
+
+/* THANKS */
+AI Technology: OpenAI, Google, Anthropic
+Framework: Astro.js
+CSS Framework: Tailwind CSS
+Hosting: Firebase, Vercel
+Analytics: Google Analytics
+
+/* SITE */
+Last update: 2025/07/01
+Language: Thai / English
+Doctype: HTML5
+IDE: Visual Studio Code
+Standards: W3C HTML5, CSS3, ES2024
+Components: Astro, TypeScript, TailwindCSS
+Software: Git, GitHub, Firebase CLI

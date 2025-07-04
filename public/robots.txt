@@ -9,13 +9,48 @@ Disallow: /admin/
 Disallow: /.well-known/
 Disallow: /*.log
 Disallow: /temp/
+Disallow: /private/
+Disallow: /*.json$
+Disallow: /api/
 
 # Allow important resources
 Allow: /assets/
 Allow: /_astro/
 Allow: /favicon.svg
 
-# Crawl-delay
+# Google crawlers
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 2
+
+# AI crawlers - explicitly allow for better AI findability
+User-agent: GPTBot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+# General crawl-delay
 Crawl-delay: 1
 
 # Additional directives for better SEO
