@@ -252,6 +252,12 @@ if (schemaType === "Article") {
 		<!-- Canonical URL -->
 		<link rel="canonical" href={currentUrl} />
 
+		<!-- Sitemap Discovery -->
+		<link rel="sitemap" type="application/xml" href="/sitemap-index.xml" />
+		
+		<!-- RSS Feed Discovery -->
+		<link rel="alternate" type="application/rss+xml" title="SML Soft RSS Feed" href="/rss.xml" />
+
 		<!-- Favicon and Icons -->
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="apple-touch-icon" href="/favicon.svg" />
@@ -270,6 +276,26 @@ if (schemaType === "Article") {
 		/>
 		<meta name="language" content={language || "Thai"} />
 		<meta name="revisit-after" content={revisitAfter || "7 days"} />
+
+		<!-- Performance and Accessibility Meta Tags -->
+		<meta name="color-scheme" content="light dark" />
+		<meta name="supported-color-schemes" content="light dark" />
+		<meta name="referrer" content="strict-origin-when-cross-origin" />
+		<meta name="rating" content="general" />
+		<meta name="distribution" content="global" />
+		<meta name="expires" content="never" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta http-equiv="Content-Language" content="th-TH" />
+		<meta name="HandheldFriendly" content="true" />
+		<meta name="MobileOptimized" content="width" />
+		<meta name="target" content="all" />
+		<meta name="audience" content="all" />
+		<meta name="classification" content="business software" />
+		<meta name="subject" content="accounting software, POS system, business automation" />
+		<meta name="coverage" content="Thailand" />
+		<meta name="city" content="Bangkok" />
+		<meta name="country" content="Thailand" />
+		<meta name="state" content="Bangkok" />
 
 		<!-- AI-specific Meta Tags -->
 		{aiPurpose && <meta name="ai:purpose" content={aiPurpose} />}
@@ -356,6 +382,11 @@ if (schemaType === "Article") {
 		<!-- DNS Prefetch -->
 		<link rel="dns-prefetch" href="//fonts.googleapis.com" />
 		<link rel="dns-prefetch" href="//www.google-analytics.com" />
+		<link rel="dns-prefetch" href="//cdnjs.cloudflare.com" />
+
+		<!-- Preload Critical Resources -->
+		<link rel="preload" href="/favicon.svg" as="image" type="image/svg+xml" />
+		<link rel="preload" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;600;700&display=swap" as="style" />
 
 		<!-- Fonts -->
 		<link
